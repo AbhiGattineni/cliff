@@ -27,8 +27,8 @@ export default function Footer() {
               </span>
             </div>
             <p className="mt-4 text-sm text-white/60">
-              Pioneering excellence in educational and business solutions with a forward-thinking
-              approach that transforms challenges into opportunities.
+              A global technology company delivering IT Staffing, Consulting Services, and
+              Innovative Products since 2008.
             </p>
             <div className="mt-6 flex gap-3">
               <a href="https://x.com/cliffservices9" aria-label="Twitter" className="p-2 rounded-lg border border-white/10 hover:bg-white/5">
@@ -69,6 +69,7 @@ export default function Footer() {
               <li><a href="/#services" className="hover:text-white">Services</a></li>
               <li><a href="/#staffing-solutions" className="hover:text-white">Staffing</a></li>
               <li><a href="/#products" className="hover:text-white">Products</a></li>
+              <li><a href="/#success-stories" className="hover:text-white">Product stories</a></li>
               <li><a href="/#contact" className="hover:text-white">Contact</a></li>
             </ul>
           </div>

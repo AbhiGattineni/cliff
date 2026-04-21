@@ -522,3 +522,72 @@ export const CONTACT = {
   office:
     'Pera Business Park, Nottingham Road, Melton Mowbray, LE13 0PB.',
 };
+
+/** Trust metrics shown on the homepage between Hero and About. */
+export const HOMEPAGE_STATS = [
+  {
+    value: '150+',
+    label: 'Team members',
+    detail: 'Engineers, recruiters, and consultants worldwide',
+  },
+  {
+    value: '2008',
+    label: 'Founded',
+    detail: 'Delivering technology outcomes since day one',
+  },
+  {
+    value: '6',
+    label: 'Countries',
+    detail: 'UK · US · Canada · India · Australia · Ireland',
+  },
+  {
+    value: '15+',
+    label: 'Years',
+    detail: 'Staffing, consulting, and product innovation',
+  },
+] as const;
+
+export type Testimonial = {
+  quote: string;
+  attribution: string;
+  role: string;
+  /** Product these reviews reference in the catalog. */
+  productName: string;
+  productSlug: string;
+  /** How Cliff engaged beyond the product (consulting, staffing, services). */
+  engagement: string;
+};
+
+/** Product-focused reviews; organization names generalized for confidentiality. */
+export const TESTIMONIALS: Testimonial[] = [
+  {
+    productName: 'Online Learning Platform',
+    productSlug: 'online-learning-platform',
+    quote:
+      'We rolled out the LMS for compliance and upskilling across three regions. Instructor workflows and reporting finally match how we run programs—learners actually complete modules because the experience is coherent, not bolted together.',
+    attribution: 'Director, L&D',
+    role: 'Global financial services',
+    engagement:
+      'Product subscription, implementation consulting (integrations + SSO), and contract instructional designers via staffing for content migration.',
+  },
+  {
+    productName: 'AI Chatbot Assistant',
+    productSlug: 'ai-chatbot-assistant',
+    quote:
+      'The assistant deflects tier‑1 internal questions with grounded answers from our policy library. Uptake on Slack was fast because your team ran a proper pilot: knowledge curation, guardrails, and analytics—not just a generic chatbot drop-in.',
+    attribution: 'Head of IT Operations',
+    role: 'Healthcare technology',
+    engagement:
+      'SaaS product, professional services for RAG setup and governance workshops, plus two embedded engineers from Cliff for a 90‑day rollout.',
+  },
+  {
+    productName: 'Cloud Security Suite',
+    productSlug: 'cloud-security-suite',
+    quote:
+      'Posture visibility across AWS and Azure went from spreadsheet chaos to one prioritized backlog. Our audit prep time dropped because findings map to controls we already care about—big step up from point tools that only send noise.',
+    attribution: 'CISO',
+    role: 'Enterprise software',
+    engagement:
+      'Enterprise license, architecture consulting (zero-trust alignment), and ongoing managed assessment hours from Cliff services.',
+  },
+];

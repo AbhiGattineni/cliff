@@ -23,11 +23,19 @@ export default function Products() {
     <section id="products" className="relative bg-ink-900 py-28 lg:py-32 min-h-[200vh]">
       <div className="container-x">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <div>
+          <div className="max-w-2xl">
             <p className="eyebrow">Products</p>
             <h2 className="mt-3 font-display text-4xl font-black text-white md:text-5xl">
               Product <span className="text-gradient">Catalog</span>
             </h2>
+            <p className="mt-4 text-sm leading-relaxed text-white/65">
+              Explore our <span className="text-white/90">live products</span> and{' '}
+              <span className="text-white/90">innovation pipeline</span> in one place. Offerings
+              tagged <span className="text-brand-300">Future / R&amp;D</span> are forward-looking
+              concepts and research-led initiatives—they sit alongside staffing and consulting as
+              part of how we invest in what&apos;s next, not as a substitute for the delivery work
+              we run for clients today.
+            </p>
           </div>
           <div className="flex flex-col gap-3 md:items-end">
             <p className="max-w-md text-sm text-white/60">

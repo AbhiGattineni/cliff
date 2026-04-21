@@ -30,6 +30,10 @@ export default function Hero() {
             Since 2008 · Global technology consulting
           </div>
 
+          <p className="mt-5 text-sm font-medium tracking-wide text-white/85 md:text-base">
+          Product Innovation · IT Staffing · Technology Services  
+          </p>
+
           <p className="mt-6 eyebrow">Beyond Human Cognition</p>
 
           <h1 className="mt-3 font-display text-5xl font-bold leading-[1.05] text-white md:text-7xl">
@@ -47,16 +51,20 @@ export default function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl text-lg text-white/70">
-            Pioneering intelligent solutions that adapt, learn, and evolve beyond conventional
-            systems.
+            Cliff Services is a global technology company: we place elite IT talent, deliver
+            consulting and engineering programs for enterprises, and build products that extend
+            our services into repeatable platforms.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#services" className="btn-primary">
+            <a href="#products" className="btn-primary">
               Discover Innovations <ArrowRight size={16} />
             </a>
-            <a href="#contact" className="btn-ghost">
-              Talk to an expert
+            <a href="#staffing-solutions" className="btn-ghost">
+              Find Talent
+            </a>
+            <a href="#services" className="btn-ghost">
+              Explore Services
             </a>
           </div>
 
