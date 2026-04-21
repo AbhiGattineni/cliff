@@ -1,5 +1,4 @@
 import { Mail, MapPin, Briefcase } from 'lucide-react';
-import { CONTACT } from '../data/site';
 
 const CAREERS_EMAIL = 'careers@cliff-services.com';
 
