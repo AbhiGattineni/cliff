@@ -46,8 +46,9 @@ export default function About() {
             CLIFF<span className="text-gradient">SERVICES</span>
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-white/70">
-            Born in the UK, now leading global innovation. We transform your technological vision
-            into reality with precision and cutting-edge expertise.
+            A global technology partner for enterprises—combining <span className="text-white/90">IT staffing</span>,{' '}
+            <span className="text-white/90">consulting & delivery services</span>, and{' '}
+            <span className="text-white/90">product innovation</span> to help teams ship, scale, and secure what matters.
           </p>
         </div>
 

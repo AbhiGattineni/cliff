@@ -5,19 +5,45 @@ import { ArrowRight } from 'lucide-react';
 
 export default function Products() {
   const [query, setQuery] = useState('');
+  const [status, setStatus] = useState<'All' | 'Live' | 'Beta' | 'R&D'>('All');
   const q = query.trim().toLowerCase();
 
+  const productStatus = (p: any): 'Live' | 'Beta' | 'R&D' => {
+    const rel = String(p.release ?? '').toLowerCase();
+    if (rel.includes('future') || rel.includes('r&d')) return 'R&D';
+    if (p.demoReady || rel.includes('available')) return 'Live';
+    return 'Beta';
+  };
+
   const filtered = useMemo(() => {
-    if (!q) return PRODUCTS as any[];
-    return (PRODUCTS as any[]).filter((p) => {
-      const hay = `${p.name} ${p.blurb} ${(p.tags ?? []).join(' ')}`.toLowerCase();
-      return hay.includes(q);
+    const base = PRODUCTS as any[];
+    const byQuery = !q
+      ? base
+      : base.filter((p) => {
+          const hay = `${p.name} ${p.blurb} ${(p.tags ?? []).join(' ')}`.toLowerCase();
+          return hay.includes(q);
+        });
+    const list = status === 'All' ? byQuery : byQuery.filter((p) => productStatus(p) === status);
+    // Credibility-first ordering: demo-ready/live first, pipeline after.
+    return [...list].sort((a, b) => {
+      const ad = a.demoReady ? 1 : 0;
+      const bd = b.demoReady ? 1 : 0;
+      if (ad !== bd) return bd - ad;
+      const ar = String(a.release ?? '').toLowerCase().includes('future') ? 0 : 1;
+      const br = String(b.release ?? '').toLowerCase().includes('future') ? 0 : 1;
+      if (ar !== br) return br - ar;
+      return String(a.id).localeCompare(String(b.id));
     });
-  }, [q]);
+  }, [q, status]);
 
   const featured = (filtered[0] ?? (PRODUCTS as any[])[0]) as any;
 
   const navigate = useNavigate();
+
+  const demoReadyCount = useMemo(
+    () => (PRODUCTS as any[]).filter((p) => Boolean(p.demoReady)).length,
+    [],
+  );
 
   return (
     <section id="products" className="relative bg-ink-900 py-28 lg:py-32 min-h-[200vh]">
@@ -30,11 +56,12 @@ export default function Products() {
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-white/65">
               Explore our <span className="text-white/90">live products</span> and{' '}
-              <span className="text-white/90">innovation pipeline</span> in one place. Offerings
-              tagged <span className="text-brand-300">Future / R&amp;D</span> are forward-looking
-              concepts and research-led initiatives—they sit alongside staffing and consulting as
-              part of how we invest in what&apos;s next, not as a substitute for the delivery work
-              we run for clients today.
+              <span className="text-white/90">innovation pipeline</span> in one place.{' '}
+              <span className="text-white/90">{demoReadyCount} products</span> are{' '}
+              <span className="text-emerald-300">demo-ready</span> today. Offerings tagged{' '}
+              <span className="text-brand-300">Future / R&amp;D</span> are forward-looking concepts
+              and research-led initiatives—our roadmap investment, not the work we sell as delivered
+              production software.
             </p>
           </div>
           <div className="flex flex-col gap-3 md:items-end">
@@ -43,6 +70,21 @@ export default function Products() {
             packaged, repeatable solutions.
             </p>
             <div className="w-full md:w-[360px]">
+              <div className="mb-3 flex flex-wrap justify-end gap-2">
+                {(['All', 'Live', 'Beta', 'R&D'] as const).map((s) => (
+                  <button
+                    key={s}
+                    onClick={() => setStatus(s)}
+                    className={`rounded-full px-4 py-1.5 text-xs font-semibold transition ${
+                      status === s
+                        ? 'bg-white/15 text-white border border-white/20'
+                        : 'border border-white/10 bg-white/5 text-white/70 hover:bg-white/10'
+                    }`}
+                  >
+                    {s}
+                  </button>
+                ))}
+              </div>
               <input
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
@@ -86,8 +128,10 @@ export default function Products() {
                       <dd className="mt-1 text-white">{featured.compatibility}</dd>
                     </div>
                     <div>
-                      <dt className="text-xs uppercase tracking-widest text-white/50">Release</dt>
-                      <dd className="mt-1 text-white">{featured.release}</dd>
+                      <dt className="text-xs uppercase tracking-widest text-white/50">Status</dt>
+                      <dd className="mt-1 text-white">
+                        {featured.demoReady ? 'Demo-ready' : featured.release}
+                      </dd>
                     </div>
                     <div>
                       <dt className="text-xs uppercase tracking-widest text-white/50">License</dt>
@@ -112,6 +156,12 @@ export default function Products() {
                       onClick={() => navigate(`/products/${featured.slug}`)}
                     >
                       Explore Product <span className="ml-1">→</span>
+                    </button>
+                    <button
+                      className="rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-white/80 hover:bg-white/10"
+                      onClick={() => navigate(`/products/${featured.slug}#demo`)}
+                    >
+                      Get a Demo
                     </button>
                     <button
                       className="rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-white/80 hover:bg-white/10"
@@ -154,7 +204,7 @@ export default function Products() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                       <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between gap-3">
                         <span className="rounded-full bg-black/40 px-3 py-1 text-xs text-white/80">
-                          {prod.release}
+                          {prod.demoReady ? 'Live · Demo-ready' : productStatus(prod) === 'R&D' ? 'R&D' : 'Beta'}
                         </span>
                         <span className="inline-flex items-center gap-1 text-xs font-medium text-white/80">
                           View <ArrowRight size={14} />

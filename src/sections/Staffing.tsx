@@ -28,7 +28,17 @@ export default function Staffing() {
     <section id="staffing-solutions" className="relative">
       <div className="bg-gradient-to-r from-brand-600 via-indigo-600 to-cyan-500 py-10 text-center text-white">
         <h2 className="font-display text-4xl font-bold md:text-5xl">Staffing Revolutionized</h2>
-        <p className="mt-2 text-white/80">15+ years uniting top talent with visionary companies.</p>
+        <p className="mt-2 text-white/80">
+          Hire faster with vetted IT talent—contract, contract-to-hire, and permanent placements.
+        </p>
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
+          <span className="rounded-full border border-white/25 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-white/90">
+            Typical turnaround: 48-hour shortlist
+          </span>
+          <span className="text-xs text-white/80">
+            for standard roles (specialized searches may vary)
+          </span>
+        </div>
       </div>
 
       <div className="bg-white py-20 text-gray-900">
@@ -36,8 +46,8 @@ export default function Staffing() {
           <div className="text-center">
             <p className="eyebrow !text-brand-600">Our Unique Approach</p>
             <p className="mx-auto mt-3 max-w-2xl text-gray-600">
-              We've revolutionized traditional staffing by integrating cutting-edge technology with
-              human expertise.
+              We combine specialized recruiting, domain expertise, and structured screening to
+              deliver high-signal candidates who ramp quickly and stay aligned to your goals.
             </p>
           </div>
 

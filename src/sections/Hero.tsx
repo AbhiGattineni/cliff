@@ -31,10 +31,10 @@ export default function Hero() {
           </div>
 
           <p className="mt-5 text-sm font-medium tracking-wide text-white/85 md:text-base">
-          Product Innovation · IT Staffing · Technology Services  
+            IT Staffing · Technology Services · Product Innovation
           </p>
 
-          <p className="mt-6 eyebrow">Beyond Human Cognition</p>
+          <p className="mt-6 eyebrow">Staffing. Services. Products.</p>
 
           <h1 className="mt-3 font-display text-5xl font-bold leading-[1.05] text-white md:text-7xl">
             <motion.span
@@ -47,13 +47,12 @@ export default function Hero() {
             >
               {ROTATING_HEADINGS[idx]}
             </motion.span>
-            <span className="block">Innovation</span>
+            <span className="block">Delivered</span>
           </h1>
 
           <p className="mt-6 max-w-xl text-lg text-white/70">
-            Cliff Services is a global technology company: we place elite IT talent, deliver
-            consulting and engineering programs for enterprises, and build products that extend
-            our services into repeatable platforms.
+            Cliff Services delivers end-to-end technology outcomes—through IT staffing, consulting
+            and engineering services, and a product catalog built from real delivery experience.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">

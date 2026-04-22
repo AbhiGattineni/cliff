@@ -51,6 +51,7 @@ export const PRODUCTS = [
     release: 'March 2025',
     license: 'Enterprise',
     tags: ['Cloud-based', 'AI-powered', '24/7 Support'],
+    demoReady: true,
     docs: {
       paperWriting:
         '## Research framing\n\nLearning Management Systems (LMS) exist to **deliver structured learning experiences** while producing **auditable evidence** of completion and performance. In practice, successful LMS deployments balance three competing goals:\n\n- **Pedagogy and UX** (learner engagement, accessibility, instructor workflows)\n- **Interoperability** (content and tool standards so institutions aren’t locked to a single vendor)\n- **Governance** (identity, data access, reporting, and long-term maintainability)\n\nThis product is positioned as a **cloud-based, cross‑platform LMS** aimed at students, teachers, and administrators, and should be specified with a standards-first approach.\n\n## Interoperability standards (why it matters)\n\nA research-backed LMS specification typically includes support for key eLearning interoperability standards:\n\n- **SCORM**: widely used for packaging content and basic tracking (completion/score/time). It’s still common in compliance and procurement contexts.\n- **xAPI (Experience API)**: enables richer event capture beyond the LMS runtime through a Learning Record Store (LRS) pattern.\n- **LTI**: enables secure external tool integration (e.g., assessments, simulations) without bespoke SSO and grade passback for every tool.\n\nDesigning around these standards reduces migration risk and supports enterprise integration patterns.\n\n## Architecture and data flows (cloud-based)\n\nA reference architecture for a cloud LMS typically describes:\n\n- **Identity and access**: SSO, roles (learner/instructor/admin), and least-privilege administration.\n- **Content lifecycle**: authoring/import, packaging validation, versioning, and publishing workflows.\n- **Learning telemetry**: what events are captured, where they’re stored, and which reports are produced.\n- **Auditability**: how the system can produce evidence for compliance training, accreditation, or internal policy enforcement.\n\n## “AI-powered” responsibly\n\nWhere AI is used, research writing should define **what is automated**, **what is advisory**, and **what requires human approval**:\n\n- Recommendation vs. decision-making\n- Model governance and change management\n- Evaluation metrics (quality, bias considerations, and drift monitoring)\n\n## References\n\n- SCORM overview and relevance in LMS ecosystems: `https://coggno.com/blog/what-is-scorm-and-why-is-it-important-for-lms-platforms-in-2026/`\n- Practical comparison of SCORM/xAPI/LTI in integrations: `https://lmspedia.org/lms-api-documentation-guide/`',
@@ -126,6 +127,7 @@ export const PRODUCTS = [
     release: 'Available',
     license: 'SaaS',
     tags: ['RAG', 'Multi-language', 'Secure'],
+    demoReady: true,
     docs: {
       paperWriting:
         '## Research framing\n\nEnterprise chat assistants are moving toward **Retrieval‑Augmented Generation (RAG)** patterns to reduce hallucinations by grounding outputs in retrieved organizational knowledge.\n\nA research-grade paper should define:\n\n- Content sources and ingestion (policies, FAQs, product docs)\n- Retrieval strategy (dense + keyword/hybrid retrieval, reranking)\n- Governance: permissions filtering and content freshness\n- Evaluation: retrieval quality and answer faithfulness metrics\n\n## Production considerations\n\nRAG systems fail most often due to document quality, chunking/indexing strategy, and lack of evaluation and observability.\n\n## References\n\n- Production RAG checklist and architecture considerations (2026): `https://jishulabs.com/blog/rag-retrieval-augmented-generation-guide-2026`\n- Production RAG best practices and evaluation metrics (2026): `https://devstarsj.github.io/2026/03/22/rag-retrieval-augmented-generation-production-best-practices-2026/`',
@@ -151,6 +153,7 @@ export const PRODUCTS = [
     release: 'Available',
     license: 'Enterprise',
     tags: ['CSPM', 'SIEM', 'Zero-trust'],
+    demoReady: true,
     docs: {
       paperWriting:
         '## Research framing\n\nMulti-cloud security programs struggle with configuration drift, inconsistent policy enforcement, and fragmented evidence for audit and risk management. A Cloud Security Suite positioned around **CSPM**, **SIEM-aligned monitoring**, and **Zero Trust** should be written as an operational program, not just tooling.\n\n## CSPM and continuous monitoring\n\nNIST SP 800‑137 describes an ISCM program as providing visibility into assets, threats/vulnerabilities, and control effectiveness to support timely risk response. CSPM capabilities (inventory, baseline checks, drift detection) are often used to operationalize continuous configuration assurance.\n\n## Zero Trust architecture\n\nNIST SP 800‑207 defines Zero Trust as shifting defenses from static perimeters to users/assets/resources, assuming no implicit trust. For cloud environments, ZT principles typically emphasize identity-centered policy decisions, segmentation, and continuous evaluation.\n\n## API protection (cloud-native)\n\nFor cloud-native platforms, secure API design and protection measures are a first-class concern.\n\n## References\n\n- NIST SP 800-137 (ISCM): `https://csrc.nist.gov/publications/detail/sp/800-137/final`\n- NIST SP 800-207 (Zero Trust Architecture): `https://csrc.nist.gov/publications/detail/sp/800-207/final`\n- NIST SP 800-228 upd1 (API protection, 2026): `https://www.nist.gov/publications/guidelines-api-protection-cloud-native-systems-march-2026-update`\n- SIEM overview (federal context): `https://www.irs.gov/privacy-disclosure/security-information-and-event-management-siem-systems`',
@@ -176,6 +179,7 @@ export const PRODUCTS = [
     release: 'Q2 2025',
     license: 'Enterprise',
     tags: ['ML-driven', 'Real-time', 'Forensics'],
+    demoReady: true,
     docs: {
       paperWriting:
         '## Research framing\n\nThreat analysis platforms must be specified as **incident response enablement**: detection is only valuable when it improves triage, containment, and recovery.\n\nNIST SP 800‑61 Rev. 3 frames incident response as part of cybersecurity risk management and integrates incident response recommendations across CSF 2.0 functions.\n\n## Real-time + forensics\n\nA research-forward document should define:\n\n- Event ingestion and normalization\n- Detection logic (capability-level description, avoiding unverifiable accuracy claims)\n- Case management lifecycle and forensic timeline generation\n- Governance for tuning, false-positive reduction, and evidence handling\n\n## References\n\n- NIST SP 800-61 Rev. 3 (Incident Response, 2025): `https://csrc.nist.gov/pubs/sp/800/61/r3/final`\n- NIST SP 800-137 (ISCM, continuous monitoring): `https://csrc.nist.gov/publications/detail/sp/800-137/final`',
@@ -201,6 +205,7 @@ export const PRODUCTS = [
     release: 'Available',
     license: 'Academic / Commercial',
     tags: ['ROS', 'Python SDK', 'Simulation'],
+    demoReady: true,
     docs: {
       paperWriting:
         '## Research framing\n\nResearch robotics platforms succeed when they reduce integration overhead and maximize reproducibility. A “Robotics Research Kit” positioned around **ROS**, a **Python SDK**, and **simulation** should be described as:\n\n- A modular hardware + software stack\n- A set of repeatable experiments/demos\n- A reproducible workflow (configs, logs, replay)\n\n## ROS concepts (why they matter)\n\nROS 2 documentation emphasizes that systems are composed of modular **nodes** that communicate via **topics**, **services**, and **actions**. This model supports scalable architectures for sensing, planning, and control.\n\n## References\n\n- ROS 2 nodes concept: `https://docs.ros.org/en/rolling/Concepts/Basic/About-Nodes.html`\n- ROS 2 topics vs services vs actions: `https://docs.ros.org/en/rolling/How-To-Guides/Topics-Services-Actions.html`',
@@ -507,11 +512,9 @@ export const TRUSTED_LOGOS = [
 ];
 
 export const ROTATING_HEADINGS = [
-  'AI & ML',
-  'Web Apps',
-  'Cybersecurity',
-  'AI Hub',
-  'RCM Services',
+  'Technology Staffing',
+  'Technology Services',
+  'Product Innovation',
 ];
 
 export const CONTACT = {

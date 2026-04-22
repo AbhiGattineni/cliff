@@ -89,8 +89,16 @@ export default function Contact() {
 
         <div className="mt-20 border-t border-gray-100 pt-10">
           <p className="text-center text-xs uppercase tracking-widest text-gray-500">Trusted By</p>
-          <div className="mt-6 overflow-hidden">
-            <div className="flex gap-14 whitespace-nowrap animate-marquee">
+          <div className="relative mt-6 overflow-hidden">
+            <div
+              className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-white to-transparent"
+              aria-hidden
+            />
+            <div
+              className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-white to-transparent"
+              aria-hidden
+            />
+            <div className="flex gap-14 whitespace-nowrap px-12 will-change-transform animate-marquee">
               {[...TRUSTED_LOGOS, ...TRUSTED_LOGOS].map((l, i) => (
                 <span
                   key={i}

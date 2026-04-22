@@ -1,7 +1,7 @@
-import { useMemo, useState } from 'react';
-import { Link, Navigate, useParams } from 'react-router-dom';
-import { ArrowLeft, ChevronRight, FileText, Presentation, Rocket, Milestone } from 'lucide-react';
-import { PRODUCTS } from '../data/site';
+import { useEffect, useMemo, useState } from 'react';
+import { Link, Navigate, useLocation, useParams } from 'react-router-dom';
+import { ArrowLeft, ChevronRight, FileText, Mail, Milestone, Presentation, Rocket } from 'lucide-react';
+import { CONTACT, PRODUCTS } from '../data/site';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
@@ -23,11 +23,47 @@ export default function ProductDetail() {
   const { slug } = useParams();
   const product = PRODUCTS.find((p) => (p as Product).slug === slug) as Product | undefined;
   const [tab, setTab] = useState<Tab>('Paper Writing');
+  const location = useLocation();
 
   if (!product) return <Navigate to="/#products" replace />;
 
   const related = PRODUCTS.filter((p) => (p as Product).slug !== product.slug).slice(0, 3) as Product[];
   const docs = product.docs ?? {};
+  const pricing = useMemo(() => {
+    const lic = String(product.license ?? '').toLowerCase();
+    if (lic.includes('saas')) return 'Subscription (request quote)';
+    if (lic.includes('enterprise')) return 'Enterprise (request quote)';
+    if (lic.includes('academic')) return 'Academic / Commercial (request quote)';
+    return 'Request quote';
+  }, [product.license]);
+
+  const demoMailto = useMemo(() => {
+    const subject = `Demo request — ${product.name}`;
+    const body = [
+      `Hello Cliff Services Team,`,
+      ``,
+      `I'd like to request a demo for: ${product.name}`,
+      ``,
+      `Company:`,
+      `Role/title:`,
+      `Use case (2–3 lines):`,
+      `Preferred timeline:`,
+      `Preferred meeting times/timezone:`,
+      ``,
+      `Thank you,`,
+      ``,
+    ].join('\n');
+    return `mailto:${CONTACT.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }, [product.name]);
+
+  useEffect(() => {
+    if (location.hash !== '#demo') return;
+    // Defer to ensure layout settles before scrolling.
+    const t = window.setTimeout(() => {
+      document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
+    return () => window.clearTimeout(t);
+  }, [location.hash]);
 
   const tabIcon = useMemo(() => {
     switch (tab) {
@@ -180,6 +216,25 @@ export default function ProductDetail() {
                   <dd className="mt-1 text-white/90">{product.license}</dd>
                 </div>
               </dl>
+              <div className="mt-4 rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <div>
+                    <p className="text-[10px] uppercase tracking-widest text-white/50">Pricing</p>
+                    <p className="mt-1 text-sm text-white/90">{pricing}</p>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    <a href="#demo" className="btn-primary !py-2.5 !px-5">
+                      Get a demo →
+                    </a>
+                    <a
+                      href={demoMailto}
+                      className="rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-white/85 hover:bg-white/10"
+                    >
+                      Email sales <Mail size={16} />
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -212,6 +267,41 @@ export default function ProductDetail() {
               <h2 className="font-display text-2xl font-bold">{tab}</h2>
             </div>
             <div className="mt-5">{body}</div>
+          </div>
+
+          <div id="demo" className="mt-14 scroll-mt-24">
+            <div className="rounded-3xl border border-gray-200 bg-gradient-to-br from-gray-50 to-white p-8 md:p-10">
+              <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-widest text-brand-600">Next step</p>
+                  <h3 className="mt-3 font-display text-3xl font-bold">Request a demo</h3>
+                  <p className="mt-3 text-gray-700">
+                    Want pricing, a walkthrough, or an implementation plan? Share your use case and we’ll respond
+                    within <span className="font-semibold">1 business day</span>.
+                  </p>
+                  <ul className="mt-5 space-y-2 text-sm text-gray-700">
+                    <li>• Live walkthrough tailored to your workflow</li>
+                    <li>• Deployment options and security requirements</li>
+                    <li>• Commercials: pricing and timelines</li>
+                  </ul>
+                </div>
+                <div className="rounded-2xl border border-gray-200 bg-white p-6">
+                  <p className="text-sm font-semibold text-gray-900">Fastest way</p>
+                  <p className="mt-2 text-sm text-gray-600">
+                    Click below to email us a pre-filled request. We’ll reply with available slots.
+                  </p>
+                  <a href={demoMailto} className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-600 px-5 py-3 text-sm font-semibold text-white hover:bg-brand-700">
+                    <Mail size={16} /> Email demo request
+                  </a>
+                  <Link
+                    to="/#contact"
+                    className="mt-3 inline-flex w-full items-center justify-center rounded-full border border-gray-200 bg-white px-5 py-3 text-sm font-semibold text-gray-800 hover:bg-gray-50"
+                  >
+                    Or use the contact form
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
 
           {related.length > 0 && (
