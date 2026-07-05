@@ -66,10 +66,10 @@ export const services: Service[] = [
     title: 'AI/ML Solutions',
     tagline: 'Beyond human cognition',
     description:
-      'We provide cutting-edge AI and Machine Learning solutions to optimize your business operations.',
+      'We provide advanced AI and Machine Learning solutions to optimize your business operations.',
     image: '/img/s2.jpg',
     overview:
-      'Navigating the transformative world of AI/ML for a decade, we have been at the epicenter of its evolution, from foundational algorithms to today’s cutting-edge neural networks.',
+      'We have worked in AI/ML for over a decade, from foundational algorithms to modern neural networks, applying them to practical enterprise problems.',
     whatWeDo: [
       'Predictive analytics and forecasting',
       'Computer vision and NLP models',
@@ -99,7 +99,7 @@ export const services: Service[] = [
     title: 'Cyber Security',
     tagline: 'Fortify every layer',
     description:
-      'Secure your data with state-of-the-art cybersecurity solutions and proactive risk assessment.',
+      'Secure your data with robust cybersecurity solutions and proactive risk assessment.',
     image: '/img/s3.jpg',
     overview:
       'From zero-trust architectures to 24/7 managed detection, our security practice helps you anticipate, withstand, and recover from modern threats.',
@@ -399,7 +399,7 @@ export const services: Service[] = [
       'End-to-end workforce management solutions to optimize human resources.',
     image: '/img/s12.jpg',
     overview:
-      'Technology-enabled workforce solutions — permanent, contract and managed services — powered by AI matching and 15+ years of specialist sourcing.',
+      'Technology-enabled workforce solutions — permanent, contract and managed services — powered by skills-based matching and 18+ years of specialist sourcing.',
     whatWeDo: [
       'Talent acquisition and RPO',
       'Contingent workforce programs',

@@ -18,11 +18,11 @@ export default function Services() {
         <div className="text-center">
           <p className="eyebrow !text-brand-600">Our Services</p>
           <h2 className="mt-4 font-display text-4xl font-extrabold md:text-5xl">
-            Consulting & Delivery Services
+            Engineering & Technology Services
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-gray-600">
-            From strategy to implementation, we help enterprise teams modernize platforms, build
-            secure systems, and deliver measurable outcomes—backed by experienced practitioners.
+            We engineer, modernize, and secure enterprise platforms—turning requirements into
+            production-grade systems and measurable outcomes, backed by experienced practitioners.
           </p>
         </div>
 

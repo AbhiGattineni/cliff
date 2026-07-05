@@ -8,7 +8,7 @@ import ServiceDetail from './pages/ServiceDetail';
 import ProductDetail from './pages/ProductDetail';
 import Careers from './pages/Careers';
 import LoginSignup from './pages/LoginSignup';
-import Legal, { PRIVACY_BODY, COOKIES_BODY, TERMS_BODY } from './pages/Legal';
+import Legal, { PRIVACY_BODY, COOKIES_BODY, TERMS_BODY, ACCESSIBILITY_BODY } from './pages/Legal';
 
 export default function App() {
   return (
@@ -25,6 +25,7 @@ export default function App() {
           <Route path="/privacy" element={<Legal title="Privacy Policy" body={PRIVACY_BODY} />} />
           <Route path="/cookies" element={<Legal title="Cookie Statement" body={COOKIES_BODY} />} />
           <Route path="/terms" element={<Legal title="Terms of Service" body={TERMS_BODY} />} />
+          <Route path="/accessibility" element={<Legal title="Accessibility Statement" body={ACCESSIBILITY_BODY} />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>

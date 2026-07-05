@@ -4,11 +4,10 @@ import { Menu, X } from 'lucide-react';
 
 const LINKS = [
   { href: '/#home', label: 'Home' },
-  { href: '/#about', label: 'About' },
-  { href: '/#success-stories', label: 'Product stories' },
   { href: '/#services', label: 'Services' },
-  { href: '/#staffing-solutions', label: 'Staffing Solutions' },
-  { href: '/#products', label: 'Products' },
+  { href: '/#industries', label: 'Industries' },
+  { href: '/#about', label: 'Company' },
+  { href: '/#certifications', label: 'Certifications' },
   { href: '/careers', label: 'Careers' },
   { href: '/#contact', label: 'Contact' },
 ];
@@ -70,9 +69,9 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link to="/loginsignup" className="hidden sm:inline-flex btn-primary !py-2 !px-4">
-            Get Started
-          </Link>
+          <a href="/#contact" className="hidden sm:inline-flex btn-primary !py-2 !px-4">
+            Download Capability Statement
+          </a>
           <button
             aria-label="Toggle menu"
             onClick={() => setOpen((v) => !v)}

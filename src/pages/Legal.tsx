@@ -46,3 +46,10 @@ export const TERMS_BODY = [
   { h: 'Disclaimer', p: 'Services are provided "as is" without warranties of any kind, either express or implied.' },
   { h: 'Limitation of Liability', p: 'To the fullest extent permitted by law, Cliff Services shall not be liable for indirect, incidental, or consequential damages.' },
 ];
+
+export const ACCESSIBILITY_BODY = [
+  { h: 'Our Commitment', p: 'Cliff Services is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.' },
+  { h: 'Conformance Status', p: 'We aim to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA. These guidelines explain how to make web content more accessible to people with a wide range of disabilities. Conformance is an ongoing effort and some content may not yet fully meet the standard.' },
+  { h: 'Measures We Take', p: 'Accessibility is considered in our design and development process, including semantic markup, keyboard navigability, sufficient color contrast, and descriptive alternative text for meaningful images.' },
+  { h: 'Feedback', p: 'We welcome your feedback on the accessibility of this website. If you encounter barriers or need information in an alternative format, please contact us at info@cliffservice.com and we will respond as promptly as we can.' },
+];

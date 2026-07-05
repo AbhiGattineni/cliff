@@ -1,16 +1,6 @@
-import { useEffect, useState } from 'react';
-import { ROTATING_HEADINGS } from '../data/site';
-import { motion } from 'framer-motion';
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
-  const [idx, setIdx] = useState(0);
-
-  useEffect(() => {
-    const t = setInterval(() => setIdx((i) => (i + 1) % ROTATING_HEADINGS.length), 2800);
-    return () => clearInterval(t);
-  }, []);
-
   return (
     <section
       id="home"
@@ -27,50 +17,29 @@ export default function Hero() {
         <div>
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            Since 2008 · Global technology consulting
+            Global IT Solutions &amp; Services · Since 2008
           </div>
 
-          <p className="mt-5 text-sm font-medium tracking-wide text-white/85 md:text-base">
-            IT Staffing · Technology Services · Product Innovation
-          </p>
-
-          <p className="mt-6 eyebrow">Staffing. Services. Products.</p>
-
-          <h1 className="mt-3 font-display text-5xl font-bold leading-[1.05] text-white md:text-7xl">
-            <motion.span
-              key={idx}
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -20, opacity: 0 }}
-              transition={{ duration: 0.4 }}
-              className="block text-gradient"
-            >
-              {ROTATING_HEADINGS[idx]}
-            </motion.span>
-            <span className="block">Delivered</span>
+          <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] text-white md:text-6xl">
+            Global Information Technology
+            <span className="block text-gradient">Solutions &amp; Services</span>
           </h1>
 
           <p className="mt-6 max-w-xl text-lg text-white/70">
-            Cliff Services delivers end-to-end technology outcomes—through IT staffing, consulting
-            and engineering services, and a product catalog built from real delivery experience.
+            Technology project delivery, clinical and life-sciences services, healthcare revenue
+            cycle management, and professional staffing — delivered across six countries through a
+            blended onsite–offshore model, since 2008.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#products" className="btn-primary">
-              Discover Innovations <ArrowRight size={16} />
+            <a href="#services" className="btn-primary">
+              Explore Our Services <ArrowRight size={16} />
             </a>
-            <a href="#staffing-solutions" className="btn-ghost">
-              Find Talent
-            </a>
-            <a href="#services" className="btn-ghost">
-              Explore Services
+            <a href="#contact" className="btn-ghost">
+              Partner With Us
             </a>
           </div>
 
-          <div className="mt-12 flex items-center gap-6 text-xs uppercase tracking-widest text-white/50">
-            <span className="inline-flex h-px w-10 bg-white/20" />
-            Scroll <ChevronDown size={14} className="animate-bounce" />
-          </div>
         </div>
 
         <div className="relative">
@@ -79,17 +48,18 @@ export default function Hero() {
             <div className="relative h-full w-full rounded-[2rem] border border-white/10 bg-white/[0.03] overflow-hidden">
               <img
                 src="/img/s1.jpg"
-                alt="AI innovation"
-                className="h-full w-full object-cover animate-float"
+                alt="Cliff Services global delivery"
+                className="h-full w-full object-cover"
                 onError={(e) => {
                   (e.currentTarget as HTMLImageElement).src = '/img/s2.jpg';
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-white/10 bg-white/5 p-3 backdrop-blur">
-                <p className="text-xs uppercase tracking-widest text-brand-300">Now live</p>
+                <p className="text-xs uppercase tracking-widest text-brand-300">Global delivery</p>
                 <p className="mt-1 text-sm text-white/80">
-                  Enterprise-grade AI copilots with secure retrieval and governed tooling.
+                  Herndon, Virginia HQ with a Hyderabad delivery center — 24×7 onsite–offshore
+                  capacity.
                 </p>
               </div>
             </div>
