@@ -135,8 +135,8 @@ export default function Footer() {
             Quality &amp; security certification program underway — ISO 9001, ISO 27001, SOC 2 Type II.
           </p>
           <p className="mt-3 text-white/60">
-            Registered entities: Cliff Services Inc. (Virginia, USA) · Cliff Services Ltd (UK)
-            [confirm legal name] · Cliff Software Services India Pvt Ltd (Hyderabad, IN).
+            Registered entities: Cliff Services Inc. (Virginia, USA) · Cliff Services Ltd (UK) ·
+            Cliff Software Services India Pvt Ltd (Hyderabad, IN).
           </p>
           <div className="mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
             <p>© 2008–2026 Cliff Services Inc. All rights reserved.</p>
