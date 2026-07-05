@@ -10,10 +10,10 @@ const DIVERSITY: Diversity[] = [
 ];
 
 const READINESS = [
-  'US Corporation — Cliff Services Inc. (EIN), Virginia',
-  'E-Verify enrolled — federal employment verification',
+  'US Corporation, Cliff Services Inc. (EIN), Virginia',
+  'E-Verify enrolled, federal employment verification',
   "Workers' compensation & liability insurance (COI on request)",
-  'Background check program — Sterling / Checkr',
+  'Background check program, Sterling / Checkr',
 ];
 
 const NETWORKS = ['SAP Ariba', 'Beeline', 'Coupa', 'IQNavigator / Workday', 'SAP Fieldglass'];
@@ -66,7 +66,7 @@ export default function Credentials() {
           <p className="mx-auto max-w-3xl text-sm leading-relaxed text-white/80">
             The result is a rare combination: a{' '}
             <span className="font-semibold text-white">diverse supplier</span> that also clears
-            enterprise security and delivery requirements — diversity value for primes, plus the
+            enterprise security and delivery requirements, diversity value for primes, plus the
             security and maturity floors they require.
           </p>
         </div>

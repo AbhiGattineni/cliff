@@ -21,7 +21,7 @@ export default function Services() {
             Engineering & Technology Services
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-gray-600">
-            We engineer, modernize, and secure enterprise platforms—turning requirements into
+            We engineer, modernize, and secure enterprise platforms, turning requirements into
             production-grade systems and measurable outcomes, backed by experienced practitioners.
           </p>
         </div>

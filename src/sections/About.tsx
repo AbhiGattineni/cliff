@@ -46,7 +46,7 @@ export default function About() {
             CLIFF<span className="text-gradient">SERVICES</span>
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-white/70">
-            A global information technology solutions and services company—delivering{' '}
+            A global information technology solutions and services company, delivering{' '}
             <span className="text-white/90">technology project delivery</span>,{' '}
             <span className="text-white/90">clinical & life-sciences services</span>,{' '}
             <span className="text-white/90">healthcare RCM</span>, and{' '}

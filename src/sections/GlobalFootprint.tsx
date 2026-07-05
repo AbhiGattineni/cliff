@@ -1,12 +1,12 @@
 import { MapPin } from 'lucide-react';
 
 const COUNTRIES = [
-  { country: 'United States', note: 'Herndon, VA — Global HQ' },
+  { country: 'United States', note: 'Herndon, VA, Global HQ' },
   { country: 'United Kingdom', note: 'Founded 2008' },
   { country: 'Ireland', note: '' },
   { country: 'Canada', note: '' },
   { country: 'Australia', note: '' },
-  { country: 'India', note: 'Hyderabad — Delivery Center' },
+  { country: 'India', note: 'Hyderabad, Delivery Center' },
 ];
 
 export default function GlobalFootprint() {

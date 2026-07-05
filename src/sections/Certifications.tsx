@@ -14,7 +14,7 @@ type Cert = {
 };
 
 /**
- * Certifications are being formally pursued — the copy intentionally frames these
+ * Certifications are being formally pursued, the copy intentionally frames these
  * as "in progress / built to standard", not as awarded. Keep this honest.
  * CMMI Level 5 is deliberately omitted here (roadmap item, not in-progress).
  */
@@ -23,17 +23,17 @@ const CERTS: Cert[] = [
     icon: Award,
     code: 'CMMI Level 3',
     name: 'Development & Services',
-    plain: 'A standardized delivery playbook — we can own project outcomes, not just supply people.',
+    plain: 'A standardized delivery playbook, we can own project outcomes, not just supply people.',
     scope:
-      'Planning, design, development, testing, and delivery of software and IT solutions and services — data engineering, cloud, AI, SAP, and web development — with associated IT staffing, quality engineering, and RCM services.',
+      'Planning, design, development, testing, and delivery of software and IT solutions and services, data engineering, cloud, AI, SAP, and web development, with associated IT staffing, quality engineering, and RCM services.',
   },
   {
     icon: BadgeCheck,
     code: 'ISO 9001:2015',
     name: 'Quality Management System',
-    plain: 'Documented, repeatable delivery processes — audited, not just intended.',
+    plain: 'Documented, repeatable delivery processes, audited, not just intended.',
     scope:
-      'Provision of technology project delivery — data engineering and analytics, cloud, cybersecurity, AI, SAP, web development, and quality engineering — with clinical data management, healthcare RCM, IT and professional staffing, and RPO.',
+      'Provision of technology project delivery, data engineering and analytics, cloud, cybersecurity, AI, SAP, web development, and quality engineering, with clinical data management, healthcare RCM, IT and professional staffing, and RPO.',
   },
   {
     icon: Lock,
@@ -41,7 +41,7 @@ const CERTS: Cert[] = [
     name: 'Information Security Management',
     plain: 'A formal security system protecting client and candidate data across US–India delivery.',
     scope:
-      'Information security governing technology project delivery, cloud and cybersecurity, clinical data management, healthcare RCM, and IT and professional staffing — covering the confidentiality, integrity, and availability of client, personal, and protected health information.',
+      'Information security governing technology project delivery, cloud and cybersecurity, clinical data management, healthcare RCM, and IT and professional staffing, covering the confidentiality, integrity, and availability of client, personal, and protected health information.',
   },
   {
     icon: ShieldCheck,
@@ -56,7 +56,7 @@ const CERTS: Cert[] = [
     icon: FileCheck2,
     code: 'SOC 3',
     name: 'Public Assurance Report',
-    plain: 'The public, shareable summary of our SOC 2 — no NDA required.',
+    plain: 'The public, shareable summary of our SOC 2, no NDA required.',
     scope:
       'General-use report on Security, Availability, and Confidentiality controls for IT managed services, cloud and data engineering, clinical data management, and healthcare RCM.',
     tag: 'Public report',
@@ -65,7 +65,7 @@ const CERTS: Cert[] = [
     icon: HeartPulse,
     code: 'HIPAA',
     name: 'Protected Health Information',
-    plain: 'Cleared to handle US health data — BAA-ready for PHI.',
+    plain: 'Cleared to handle US health data, BAA-ready for PHI.',
     scope:
       'Handling, processing, and safeguarding of Protected Health Information (PHI) in healthcare RCM, medical coding and billing, and clinical data management, per the HIPAA Privacy, Security, and Breach Notification Rules.',
     tag: 'BAA-ready',
@@ -88,7 +88,7 @@ export default function Certifications() {
             Cliff Services delivers software and technology project delivery across data engineering,
             cloud, cybersecurity, AI, SAP, web, and quality engineering; clinical data management;
             healthcare RCM; and IT and professional staffing. Our delivery processes are built to
-            internationally recognized quality, security, and process-maturity frameworks — formal
+            internationally recognized quality, security, and process-maturity frameworks, formal
             certification against the standards below is currently{' '}
             <span className="text-white/90">in progress</span>.
           </p>

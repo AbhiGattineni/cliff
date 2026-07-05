@@ -20,7 +20,7 @@ const JOBS = [
     type: 'Full-time',
     team: 'AI/ML',
     overview:
-      'Build and ship applied ML systems for real products—recommendation, forecasting, NLP, and computer vision—with strong evaluation, monitoring, and responsible AI practices.',
+      'Build and ship applied ML systems for real products, recommendation, forecasting, NLP, and computer vision, with strong evaluation, monitoring, and responsible AI practices.',
     responsibilities: [
       'Design, train, and deploy ML models with measurable offline/online metrics.',
       'Build data/feature pipelines, experiment tracking, and reproducible training workflows.',
@@ -41,7 +41,7 @@ const JOBS = [
     type: 'Full-time',
     team: 'Engineering',
     overview:
-      'Build modern web experiences and APIs that power our product catalog, customer portals, and internal tooling—fast, accessible, and secure.',
+      'Build modern web experiences and APIs that power our product catalog, customer portals, and internal tooling, fast, accessible, and secure.',
     responsibilities: [
       'Deliver frontend features in React with strong UX and performance.',
       'Build and maintain APIs and integrations; ensure reliability and security.',
@@ -99,12 +99,12 @@ const JOBS = [
     niceToHave: ['Experience with cloud security (AWS/Azure/GCP).', 'Scripting skills (Python/Bash).'],
   },
   {
-    title: 'Product Designer — AI Hub',
+    title: 'Product Designer, AI Hub',
     location: 'Remote · Global',
     type: 'Contract / Full-time',
     team: 'Design',
     overview:
-      'Design delightful, accessible product experiences for AI-powered workflows—balancing usability, trust, and clarity in complex systems.',
+      'Design delightful, accessible product experiences for AI-powered workflows, balancing usability, trust, and clarity in complex systems.',
     responsibilities: [
       'Create user flows, wireframes, and high-fidelity UI designs.',
       'Define interaction patterns for AI-assisted workflows and approvals.',
@@ -125,7 +125,7 @@ const JOBS = [
     type: 'Full-time',
     team: 'Data',
     overview:
-      'Turn product and operational data into clear insights—dashboards, metrics definitions, and analyses that guide roadmap, growth, and delivery execution.',
+      'Turn product and operational data into clear insights, dashboards, metrics definitions, and analyses that guide roadmap, growth, and delivery execution.',
     responsibilities: [
       'Define and maintain core metrics (activation, retention, funnel, service levels).',
       'Build dashboards and recurring reporting with clear interpretation.',
@@ -146,7 +146,7 @@ const JOBS = [
     type: 'Full-time',
     team: 'Enterprise Solutions',
     overview:
-      'Lead SAP S/4HANA implementations and optimizations across finance, logistics, and operations—driving measurable business outcomes with clean process design.',
+      'Lead SAP S/4HANA implementations and optimizations across finance, logistics, and operations, driving measurable business outcomes with clean process design.',
     responsibilities: [
       'Run discovery workshops, gather requirements, and define target processes.',
       'Configure and validate SAP modules; support integrations and testing.',
@@ -167,7 +167,7 @@ const JOBS = [
     type: 'Full-time',
     team: 'Enterprise Solutions',
     overview:
-      'Deliver ERP implementations with a focus on finance and operations—requirements, configuration, validation, and user adoption.',
+      'Deliver ERP implementations with a focus on finance and operations, requirements, configuration, validation, and user adoption.',
     responsibilities: [
       'Translate business needs into solution design and configuration.',
       'Plan and execute testing, training, and release readiness activities.',
@@ -209,7 +209,7 @@ const JOBS = [
     type: 'Full-time',
     team: 'Delivery',
     overview:
-      'Drive end-to-end delivery for cross-functional initiatives: planning, execution, risk management, and stakeholder reporting—ensuring on-time, high-quality outcomes.',
+      'Drive end-to-end delivery for cross-functional initiatives: planning, execution, risk management, and stakeholder reporting, ensuring on-time, high-quality outcomes.',
     responsibilities: [
       'Own delivery plans, timelines, and dependency management.',
       'Run execution rituals (status, risks, change control) and keep teams aligned.',
@@ -227,7 +227,7 @@ const JOBS = [
 ] satisfies Job[];
 
 function buildApplyMailto(job: Job) {
-  const subject = `Application — ${job.title}`;
+  const subject = `Application, ${job.title}`;
   const body = [
     `Hello Cliff Services Careers Team,`,
     ``,

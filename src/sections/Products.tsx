@@ -60,7 +60,7 @@ export default function Products() {
               <span className="text-white/90">{demoReadyCount} products</span> are{' '}
               <span className="text-emerald-300">demo-ready</span> today. Offerings tagged{' '}
               <span className="text-brand-300">Future / R&amp;D</span> are forward-looking concepts
-              and research-led initiatives—our roadmap investment, not the work we sell as delivered
+              and research-led initiatives, our roadmap investment, not the work we sell as delivered
               production software.
             </p>
           </div>

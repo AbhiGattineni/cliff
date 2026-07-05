@@ -5,7 +5,7 @@ const INDUSTRIES = [
   {
     icon: Landmark,
     name: 'Banking, Financial Services & Insurance',
-    body: 'Secure data, cloud, and delivery for BFSI — backed by information-security controls.',
+    body: 'Secure data, cloud, and delivery for BFSI, backed by information-security controls.',
   },
   {
     icon: HeartPulse,

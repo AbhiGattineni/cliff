@@ -27,7 +27,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="mt-4 text-sm text-white/60">
-              A global information technology solutions and services company — technology project
+              A global information technology solutions and services company, technology project
               delivery, clinical & life-sciences services, healthcare RCM, and professional staffing
               across six countries since 2008.
             </p>
@@ -132,7 +132,7 @@ export default function Footer() {
 
         <div className="mt-14 border-t border-white/10 pt-6 text-xs text-white/50">
           <p className="text-white/55">
-            Quality &amp; security certification program underway — ISO 9001, ISO 27001, SOC 2 Type II.
+            Quality &amp; security certification program underway, ISO 9001, ISO 27001, SOC 2 Type II.
           </p>
           <p className="mt-3 text-white/60">
             Registered entities: Cliff Services Inc. (Virginia, USA) · Cliff Services Ltd (UK) ·

@@ -13,7 +13,7 @@ export default function SuccessStories() {
             Reviews from <span className="text-gradient">product rollouts</span>
           </h2>
           <p className="mt-4 text-white/65">
-            Real feedback on our catalog—alongside how teams combine{' '}
+            Real feedback on our catalog, alongside how teams combine{' '}
             <span className="text-white/85">consulting</span>,{' '}
             <span className="text-white/85">staffing</span>, and{' '}
             <span className="text-white/85">services</span> to implement, staff, and run what we

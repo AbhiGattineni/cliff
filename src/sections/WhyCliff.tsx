@@ -17,7 +17,7 @@ export default function WhyCliff() {
           </h2>
           <p className="mt-5 text-white/70">
             Most diverse suppliers can't clear enterprise security review. Most certified firms bring
-            no supplier-diversity value. Cliff Services is engineered to be both — a disability-owned
+            no supplier-diversity value. Cliff Services is engineered to be both, a disability-owned
             business (certification underway) with a deliberate ISO, SOC 2, and CMMI credential stack
             in progress. For our clients, that means supplier-diversity value with a low-compliance-risk
             delivery partner.
