@@ -27,7 +27,7 @@ export default function Hero() {
 
           <p className="mt-6 max-w-xl text-lg text-white/70">
             Technology project delivery, clinical and life-sciences services, healthcare revenue
-            cycle management, and professional staffing — delivered across six countries through a
+            cycle management, and professional staffing, delivered across six countries through a
             blended onsite–offshore model, since 2008.
           </p>
 
@@ -58,7 +58,7 @@ export default function Hero() {
               <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-white/10 bg-white/5 p-3 backdrop-blur">
                 <p className="text-xs uppercase tracking-widest text-brand-300">Global delivery</p>
                 <p className="mt-1 text-sm text-white/80">
-                  Herndon, Virginia HQ with a Hyderabad delivery center — 24×7 onsite–offshore
+                  Herndon, Virginia HQ with a Hyderabad delivery center, 24×7 onsite–offshore
                   capacity.
                 </p>
               </div>

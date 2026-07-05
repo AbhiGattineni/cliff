@@ -23,7 +23,7 @@ export default function Staffing() {
         </p>
         <h2 className="mt-2 font-display text-4xl font-bold md:text-5xl">Talent Solutions</h2>
         <p className="mt-2 text-white/80">
-          Scale your product and engineering teams with vetted specialists—contract,
+          Scale your product and engineering teams with vetted specialists, contract,
           contract-to-hire, and permanent placements.
         </p>
         <div className="mt-5 flex flex-wrap items-center justify-center gap-2">

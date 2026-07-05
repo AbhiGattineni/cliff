@@ -38,7 +38,7 @@ export default function ProductDetail() {
   }, [product.license]);
 
   const demoMailto = useMemo(() => {
-    const subject = `Demo request — ${product.name}`;
+    const subject = `Demo request, ${product.name}`;
     const body = [
       `Hello Cliff Services Team,`,
       ``,

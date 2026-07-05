@@ -36,7 +36,7 @@ export const services: Service[] = [
       'Comprehensive software quality assurance services to ensure your applications meet the highest standards.',
     image: '/img/s1.jpg',
     overview:
-      'We deliver end-to-end quality engineering — from test strategy and automation to performance, security, and accessibility testing — so your releases ship with confidence.',
+      'We deliver end-to-end quality engineering, from test strategy and automation to performance, security, and accessibility testing, so your releases ship with confidence.',
     whatWeDo: [
       'Manual and automated functional testing',
       'Performance, load and stress testing',
@@ -135,7 +135,7 @@ export const services: Service[] = [
       'Innovative healthcare solutions to enhance patient care and streamline operations.',
     image: '/img/s4.jpg',
     overview:
-      'We partner with providers, payers and life-science innovators to modernize care delivery, unlock data, and improve outcomes — securely and at scale.',
+      'We partner with providers, payers and life-science innovators to modernize care delivery, unlock data, and improve outcomes, securely and at scale.',
     whatWeDo: [
       'EHR integration and interoperability',
       'Telehealth and remote monitoring',
@@ -168,7 +168,7 @@ export const services: Service[] = [
       'Transform raw data into actionable insights with our BI solutions.',
     image: '/img/s5.jpg',
     overview:
-      'We turn sprawling datasets into clear, real-time decision surfaces — modern lakehouses, governed semantic layers and beautiful self-serve dashboards.',
+      'We turn sprawling datasets into clear, real-time decision surfaces, modern lakehouses, governed semantic layers and beautiful self-serve dashboards.',
     whatWeDo: [
       'Data warehouse and lakehouse design',
       'ETL/ELT pipelines',
@@ -201,7 +201,7 @@ export const services: Service[] = [
       'Scalable and secure cloud solutions to accelerate digital transformation.',
     image: '/img/s6.jpg',
     overview:
-      'We architect and operate cloud platforms on AWS, Azure and GCP — from green-field landing zones to complex mainframe migrations — with cost and security as first principles.',
+      'We architect and operate cloud platforms on AWS, Azure and GCP, from green-field landing zones to complex mainframe migrations, with cost and security as first principles.',
     whatWeDo: [
       'Cloud strategy and landing zones',
       'Migration and modernization',
@@ -234,7 +234,7 @@ export const services: Service[] = [
       'Custom web applications and responsive websites tailored to your needs.',
     image: '/img/s7.jpg',
     overview:
-      'Beautifully crafted, performance-obsessed web apps — built with React, Next.js and edge platforms — that look great, ship fast and convert.',
+      'Beautifully crafted, performance-obsessed web apps, built with React, Next.js and edge platforms, that look great, ship fast and convert.',
     whatWeDo: [
       'Design systems and UI engineering',
       'SSR/SSG web applications',
@@ -267,7 +267,7 @@ export const services: Service[] = [
       'Comprehensive Oracle solutions for database management and enterprise applications.',
     image: '/img/s8.jpg',
     overview:
-      'Our certified Oracle specialists help you extract more value from your Oracle estate — databases, EBS, Fusion and beyond — while reducing TCO.',
+      'Our certified Oracle specialists help you extract more value from your Oracle estate, databases, EBS, Fusion and beyond, while reducing TCO.',
     whatWeDo: [
       'Database administration and tuning',
       'Oracle Cloud migrations',
@@ -300,7 +300,7 @@ export const services: Service[] = [
       'SAP implementation and support services to enhance business efficiency.',
     image: '/img/s9.jpg',
     overview:
-      'End-to-end SAP advisory and delivery — greenfield, brownfield and selective data migration — accelerating your move to S/4HANA.',
+      'End-to-end SAP advisory and delivery, greenfield, brownfield and selective data migration, accelerating your move to S/4HANA.',
     whatWeDo: [
       'S/4HANA implementations',
       'SAP BTP extensions',
@@ -333,7 +333,7 @@ export const services: Service[] = [
       'SAS Clinical Data Management solutions to streamline clinical trials and research.',
     image: '/img/s10.jpg',
     overview:
-      'We help sponsors and CROs deliver high-quality, regulator-ready clinical data — from EDC setup through database lock — using SAS and modern standards.',
+      'We help sponsors and CROs deliver high-quality, regulator-ready clinical data, from EDC setup through database lock, using SAS and modern standards.',
     whatWeDo: [
       'EDC design and build',
       'SDTM/ADaM standards mapping',
@@ -399,7 +399,7 @@ export const services: Service[] = [
       'End-to-end workforce management solutions to optimize human resources.',
     image: '/img/s12.jpg',
     overview:
-      'Technology-enabled workforce solutions — permanent, contract and managed services — powered by skills-based matching and 18+ years of specialist sourcing.',
+      'Technology-enabled workforce solutions, permanent, contract and managed services, powered by skills-based matching and 18+ years of specialist sourcing.',
     whatWeDo: [
       'Talent acquisition and RPO',
       'Contingent workforce programs',
@@ -432,7 +432,7 @@ export const services: Service[] = [
       'Global System Integrator solutions for seamless digital transformation.',
     image: '/img/s13.jpg',
     overview:
-      'Enterprise-grade systems integration across ERP, CRM, HCM and bespoke platforms — connected via modern event and API backbones.',
+      'Enterprise-grade systems integration across ERP, CRM, HCM and bespoke platforms, connected via modern event and API backbones.',
     whatWeDo: [
       'Integration architecture',
       'API and event platforms',
@@ -465,7 +465,7 @@ export const services: Service[] = [
       'Innovative RCM solutions to streamline financial processes and maximize revenue.',
     image: '/img/s14.jpg',
     overview:
-      'End-to-end Revenue Cycle Management — from eligibility and coding through denials and analytics — helping providers capture every dollar earned.',
+      'End-to-end Revenue Cycle Management, from eligibility and coding through denials and analytics, helping providers capture every dollar earned.',
     whatWeDo: [
       'Patient access and eligibility',
       'Medical coding and auditing',

@@ -287,7 +287,7 @@ export const PRODUCTS = [
       mvpDemo:
         '## MVP demo scope\n\n- Wearable ingestion (steps, sleep, HR trend placeholders depending on device)\n- Daily check-ins and longitudinal trend views\n- “Proactive” alerts framed as **recommendations** (e.g., seek clinical review) not diagnosis\n- Friend requests + consent-based sharing + emergency contact alerts\n\n## Safety and compliance posture\n\n- Clear disclaimers + boundaries of intended use\n- Privacy-first defaults\n\n## References\n\n- WHO guideline on decision support + tracking (conditions): `https://iris.who.int/bitstream/handle/10665/311980/WHO-RHR-19.10-eng.pdf`',
       ideaPitch:
-        '## Pitch narrative\n\n### Problem\n\nPeople struggle to turn daily health signals into consistent habits and timely care.\n\n### Solution\n\nA companion that tracks, explains, and escalates—combining longitudinal monitoring with decision support and a trusted social layer.\n\n### Future/R&D\n\nClinical-grade decision support requires strong validation, careful product claims, and regulatory alignment.\n\n## References\n\n- Sensor-based DHT evidence discussion (npj Digital Medicine, 2026): `https://www.nature.com/articles/s41746-026-02512-w`',
+        '## Pitch narrative\n\n### Problem\n\nPeople struggle to turn daily health signals into consistent habits and timely care.\n\n### Solution\n\nA companion that tracks, explains, and escalates, combining longitudinal monitoring with decision support and a trusted social layer.\n\n### Future/R&D\n\nClinical-grade decision support requires strong validation, careful product claims, and regulatory alignment.\n\n## References\n\n- Sensor-based DHT evidence discussion (npj Digital Medicine, 2026): `https://www.nature.com/articles/s41746-026-02512-w`',
       timeline: [
         { label: 'Discovery', detail: 'Define signals, intended use, privacy model, and safety boundaries.', duration: '2–4 weeks' },
         { label: 'MVP Demo Build', detail: 'Ingestion + trends + consent sharing + recommendation alerts.', duration: '6–10 weeks' },
@@ -337,7 +337,7 @@ export const PRODUCTS = [
       mvpDemo:
         '## MVP demo scope\n\n- Voice-first intent capture with confirmation\n- Vision-based context extraction (e.g., “this product”, “that sign”) with disambiguation\n- Task execution across a small set of services (calendar, email, travel booking mock)\n- “Privacy modes”: recording indicator + on-device processing toggle + redaction\n\n## References\n\n- Gaze+voice object referencing research: `https://arxiv.org/html/2601.19281v1`',
       ideaPitch:
-        '## Pitch narrative\n\n### Problem\n\nApps fragment workflows; the interface tax grows as services multiply.\n\n### Solution\n\nA multimodal agent OS that converts intent into executed workflows across services—without requiring a phone as the primary UI.\n\n### Future/R&D\n\nSuccess depends on safety, privacy, and trustworthy execution guarantees.\n\n## References\n\n- Always-on wearable agent design (VisionClaw): `https://arxiv.org/html/2604.03486v1`',
+        '## Pitch narrative\n\n### Problem\n\nApps fragment workflows; the interface tax grows as services multiply.\n\n### Solution\n\nA multimodal agent OS that converts intent into executed workflows across services, without requiring a phone as the primary UI.\n\n### Future/R&D\n\nSuccess depends on safety, privacy, and trustworthy execution guarantees.\n\n## References\n\n- Always-on wearable agent design (VisionClaw): `https://arxiv.org/html/2604.03486v1`',
       timeline: [
         { label: 'Discovery', detail: 'Define device target and privacy model; select 3 core workflows.', duration: '3–5 weeks' },
         { label: 'MVP Demo Build', detail: 'Multimodal intent + tool execution + confirmation + logs.', duration: '8–12 weeks' },
@@ -383,7 +383,7 @@ export const PRODUCTS = [
     tags: ['IoT Security', 'Zero Trust', 'Smart Home'],
     docs: {
       paperWriting:
-        '## Research framing\n\nSmart homes combine safety-critical sensors (gas), automation (lights), and cloud connectivity—creating a broad attack surface. A credible research paper should be structured around:\n\n- Secure onboarding and identity\n- Least privilege device-to-cloud access\n- Patchability and post-market monitoring\n- Segmentation, continuous monitoring, and incident handling\n\nNIST SP 800-207 defines Zero Trust principles; NIST IR 8259 Rev. 1 (draft updates) describes foundational cybersecurity activities for IoT product manufacturers across pre- and post-market.\n\n## References\n\n- NIST SP 800-207 (Zero Trust): `https://csrc.nist.gov/pubs/sp/800/207/final`\n- NIST IR 8259 Rev. 1 (IoT manufacturer activities, 2025 draft series): `https://csrc.nist.gov/pubs/ir/8259/r1/ipd`',
+        '## Research framing\n\nSmart homes combine safety-critical sensors (gas), automation (lights), and cloud connectivity, creating a broad attack surface. A credible research paper should be structured around:\n\n- Secure onboarding and identity\n- Least privilege device-to-cloud access\n- Patchability and post-market monitoring\n- Segmentation, continuous monitoring, and incident handling\n\nNIST SP 800-207 defines Zero Trust principles; NIST IR 8259 Rev. 1 (draft updates) describes foundational cybersecurity activities for IoT product manufacturers across pre- and post-market.\n\n## References\n\n- NIST SP 800-207 (Zero Trust): `https://csrc.nist.gov/pubs/sp/800/207/final`\n- NIST IR 8259 Rev. 1 (IoT manufacturer activities, 2025 draft series): `https://csrc.nist.gov/pubs/ir/8259/r1/ipd`',
       mvpDemo:
         '## MVP demo scope\n\n- Secure device onboarding flow (identity + pairing)\n- Network segmentation defaults (guest/IoT VLAN policies)\n- Continuous monitoring dashboard (device posture + anomalies)\n- Safety automations (gas alert → shutoff relay simulation) with strict approvals\n\n## References\n\n- NIST IR 8259 Rev. 1: `https://csrc.nist.gov/pubs/ir/8259/r1/ipd`',
       ideaPitch:
@@ -546,7 +546,7 @@ export const HOMEPAGE_STATS = [
   {
     value: 'Underway',
     label: 'Certification program',
-    detail: 'ISO 9001 · ISO 27001 · SOC 2 · CMMI — in progress',
+    detail: 'ISO 9001 · ISO 27001 · SOC 2 · CMMI, in progress',
   },
 ] as const;
 
@@ -567,7 +567,7 @@ export const TESTIMONIALS: Testimonial[] = [
     productName: 'Online Learning Platform',
     productSlug: 'online-learning-platform',
     quote:
-      'We rolled out the LMS for compliance and upskilling across three regions. Instructor workflows and reporting finally match how we run programs—learners actually complete modules because the experience is coherent, not bolted together.',
+      'We rolled out the LMS for compliance and upskilling across three regions. Instructor workflows and reporting finally match how we run programs, learners actually complete modules because the experience is coherent, not bolted together.',
     attribution: 'Director, L&D',
     role: 'Global financial services',
     engagement:
@@ -577,7 +577,7 @@ export const TESTIMONIALS: Testimonial[] = [
     productName: 'AI Chatbot Assistant',
     productSlug: 'ai-chatbot-assistant',
     quote:
-      'The assistant deflects tier‑1 internal questions with grounded answers from our policy library. Uptake on Slack was fast because your team ran a proper pilot: knowledge curation, guardrails, and analytics—not just a generic chatbot drop-in.',
+      'The assistant deflects tier‑1 internal questions with grounded answers from our policy library. Uptake on Slack was fast because your team ran a proper pilot: knowledge curation, guardrails, and analytics, not just a generic chatbot drop-in.',
     attribution: 'Head of IT Operations',
     role: 'Healthcare technology',
     engagement:
@@ -587,7 +587,7 @@ export const TESTIMONIALS: Testimonial[] = [
     productName: 'Cloud Security Suite',
     productSlug: 'cloud-security-suite',
     quote:
-      'Posture visibility across AWS and Azure went from spreadsheet chaos to one prioritized backlog. Our audit prep time dropped because findings map to controls we already care about—big step up from point tools that only send noise.',
+      'Posture visibility across AWS and Azure went from spreadsheet chaos to one prioritized backlog. Our audit prep time dropped because findings map to controls we already care about, big step up from point tools that only send noise.',
     attribution: 'CISO',
     role: 'Enterprise software',
     engagement:

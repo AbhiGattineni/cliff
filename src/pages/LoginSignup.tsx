@@ -20,7 +20,7 @@ export default function LoginSignup() {
             Welcome to <span className="text-gradient">Cliff Services</span>
           </h1>
           <p className="mt-4 max-w-md text-white/70">
-            Access your dashboard, manage engagements and track deliverables — all in one place.
+            Access your dashboard, manage engagements and track deliverables, all in one place.
           </p>
           <ul className="mt-8 space-y-3 text-sm text-white/70">
             <li>✓ Project delivery dashboards</li>
