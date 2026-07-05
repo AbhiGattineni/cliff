@@ -5,19 +5,19 @@ const PILLARS = [
     n: '01',
     title: 'MISSION',
     body:
-      'Crafting cutting-edge tech solutions to empower businesses in a dynamic digital landscape, delivering precision with every interaction.',
+      'To deliver technology outcomes and talent with the discipline of a global firm and the attention of a founder-led one.',
   },
   {
     n: '02',
     title: 'VISION',
     body:
-      'Pioneering a future where technology consulting redefines global innovation and excellence, constantly pushing boundaries.',
+      'To be the most trusted diverse technology partner in every market we serve.',
   },
   {
     n: '03',
     title: 'VALUES',
     body:
-      'INNOVATION — Redefining IT with bold creativity. INTEGRITY — Unwavering trust in every action. EXCELLENCE — Pursuit of perfection, always.',
+      'Delivery integrity. Measurable quality. Long-term relationships.',
   },
 ];
 
@@ -46,9 +46,11 @@ export default function About() {
             CLIFF<span className="text-gradient">SERVICES</span>
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-white/70">
-            A global technology partner for enterprises—combining <span className="text-white/90">IT staffing</span>,{' '}
-            <span className="text-white/90">consulting & delivery services</span>, and{' '}
-            <span className="text-white/90">product innovation</span> to help teams ship, scale, and secure what matters.
+            A global information technology solutions and services company—delivering{' '}
+            <span className="text-white/90">technology project delivery</span>,{' '}
+            <span className="text-white/90">clinical & life-sciences services</span>,{' '}
+            <span className="text-white/90">healthcare RCM</span>, and{' '}
+            <span className="text-white/90">professional staffing</span> across six countries since 2008.
           </p>
         </div>
 

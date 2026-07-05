@@ -512,41 +512,41 @@ export const TRUSTED_LOGOS = [
 ];
 
 export const ROTATING_HEADINGS = [
-  'Technology Staffing',
-  'Technology Services',
-  'Product Innovation',
+  'Products',
+  'Platforms',
+  'Software Solutions',
 ];
 
 export const CONTACT = {
   email: 'info@cliffservice.com',
   careersEmail: 'careers@cliffservice.com',
-  phone: '+44 330 133 4363',
-  phoneUs: '+1 800 123 4567',
+  phone: '+1 571-833-1719',
+  phoneUk: '+44 330 133 4363',
   office:
-    'Pera Business Park, Nottingham Road, Melton Mowbray, LE13 0PB.',
+    '13873 Park Center Road, Suite 181, Herndon, VA 20171, USA',
 };
 
 /** Trust metrics shown on the homepage between Hero and About. */
 export const HOMEPAGE_STATS = [
   {
-    value: '150+',
-    label: 'Team members',
-    detail: 'Engineers, recruiters, and consultants worldwide',
-  },
-  {
     value: '2008',
     label: 'Founded',
-    detail: 'Delivering technology outcomes since day one',
+    detail: 'In the United Kingdom, rooted in SAP IS-U consulting',
   },
   {
     value: '6',
-    label: 'Countries',
-    detail: 'UK · US · Canada · India · Australia · Ireland',
+    label: 'Operating countries',
+    detail: 'US · UK · Ireland · Canada · Australia · India',
   },
   {
-    value: '15+',
-    label: 'Years',
-    detail: 'Staffing, consulting, and product innovation',
+    value: 'HQ + Delivery',
+    label: 'Herndon, VA & Hyderabad',
+    detail: '24×7 blended onsite–offshore delivery capacity',
+  },
+  {
+    value: 'Underway',
+    label: 'Certification program',
+    detail: 'ISO 9001 · ISO 27001 · SOC 2 · CMMI — in progress',
   },
 ] as const;
 

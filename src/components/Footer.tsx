@@ -27,8 +27,9 @@ export default function Footer() {
               </span>
             </div>
             <p className="mt-4 text-sm text-white/60">
-              A global technology company delivering IT Staffing, Consulting Services, and
-              Innovative Products since 2008.
+              A global information technology solutions and services company — technology project
+              delivery, clinical & life-sciences services, healthcare RCM, and professional staffing
+              across six countries since 2008.
             </p>
             <div className="mt-6 flex gap-3">
               <a href="https://x.com/cliffservices9" aria-label="Twitter" className="p-2 rounded-lg border border-white/10 hover:bg-white/5">
@@ -65,11 +66,12 @@ export default function Footer() {
             <h4 className="mt-8 text-sm font-semibold text-white">Navigation</h4>
             <ul className="mt-3 grid grid-cols-2 gap-2 text-sm text-white/70">
               <li><a href="/#home" className="hover:text-white">Home</a></li>
-              <li><a href="/#about" className="hover:text-white">About</a></li>
               <li><a href="/#services" className="hover:text-white">Services</a></li>
-              <li><a href="/#staffing-solutions" className="hover:text-white">Staffing</a></li>
-              <li><a href="/#products" className="hover:text-white">Products</a></li>
-              <li><a href="/#success-stories" className="hover:text-white">Product stories</a></li>
+              <li><a href="/#industries" className="hover:text-white">Industries</a></li>
+              <li><a href="/#about" className="hover:text-white">Company</a></li>
+              <li><a href="/#certifications" className="hover:text-white">Certifications</a></li>
+              <li><a href="/#credentials" className="hover:text-white">Supplier Diversity</a></li>
+              <li><a href="/careers" className="hover:text-white">Careers</a></li>
               <li><a href="/#contact" className="hover:text-white">Contact</a></li>
             </ul>
           </div>
@@ -128,11 +130,22 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/50">
-          <p>© {new Date().getFullYear()} Cliff Services. All rights reserved. Crafted with precision.</p>
-          <div className="flex gap-5">
-            <Link to="/terms" className="hover:text-white">Terms of Service</Link>
-            <Link to="/privacy" className="hover:text-white">Privacy Policy</Link>
+        <div className="mt-14 border-t border-white/10 pt-6 text-xs text-white/50">
+          <p className="text-white/55">
+            Quality &amp; security certification program underway — ISO 9001, ISO 27001, SOC 2 Type II.
+          </p>
+          <p className="mt-3 text-white/60">
+            Registered entities: Cliff Services Inc. (Virginia, USA) · Cliff Services Ltd (UK) ·
+            Cliff Software Services India Pvt Ltd (Hyderabad, IN).
+          </p>
+          <div className="mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <p>© 2008–2026 Cliff Services Inc. All rights reserved.</p>
+            <div className="flex flex-wrap gap-5">
+              <Link to="/privacy" className="hover:text-white">Privacy</Link>
+              <Link to="/cookies" className="hover:text-white">Cookies</Link>
+              <Link to="/terms" className="hover:text-white">Terms</Link>
+              <Link to="/accessibility" className="hover:text-white">Accessibility</Link>
+            </div>
           </div>
         </div>
       </div>
