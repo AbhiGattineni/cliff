@@ -4,7 +4,6 @@ import { CheckCircle2 } from 'lucide-react';
 type Diversity = { code: string; name: string; status: 'Active' | 'In progress' };
 
 const DIVERSITY: Diversity[] = [
-  { code: 'Virginia SWaM', name: 'Small, Women & Minority-owned Business', status: 'Active' },
   { code: 'NMSDC MBE', name: 'Minority Business Enterprise', status: 'In progress' },
   { code: 'Disability:IN DOBE', name: 'Disability-Owned Business Enterprise', status: 'In progress' },
 ];
