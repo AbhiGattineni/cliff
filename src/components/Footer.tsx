@@ -139,7 +139,7 @@ export default function Footer() {
             Cliff Software Services India Pvt Ltd (Hyderabad, IN).
           </p>
           <div className="mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-            <p>© 2008–2026 Cliff Services Inc. All rights reserved.</p>
+            <p>© 2008–2026 Cliff Services. All rights reserved.</p>
             <div className="flex flex-wrap gap-5">
               <Link to="/privacy" className="hover:text-white">Privacy</Link>
               <Link to="/cookies" className="hover:text-white">Cookies</Link>
