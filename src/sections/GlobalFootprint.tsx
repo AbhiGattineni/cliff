@@ -6,7 +6,7 @@ const COUNTRIES = [
   { country: 'Ireland', note: 'Dublin' },
   { country: 'Canada', note: 'Mississauga' },
   { country: 'Australia', note: 'Victoria' },
-  { country: 'India', note: '' },
+  { country: 'India', note: 'Hyderabad' },
 ];
 
 export default function GlobalFootprint() {
