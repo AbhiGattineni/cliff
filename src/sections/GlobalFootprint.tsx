@@ -2,10 +2,10 @@ import { MapPin } from 'lucide-react';
 
 const COUNTRIES = [
   { country: 'United States', note: 'Herndon, VA, Global HQ' },
-  { country: 'United Kingdom', note: 'Founded 2008' },
-  { country: 'Ireland', note: '' },
-  { country: 'Canada', note: '' },
-  { country: 'Australia', note: '' },
+  { country: 'United Kingdom', note: 'London, founded 2008' },
+  { country: 'Ireland', note: 'Dublin' },
+  { country: 'Canada', note: 'Mississauga' },
+  { country: 'Australia', note: 'Victoria' },
   { country: 'India', note: '' },
 ];
 
