@@ -1,5 +1,5 @@
 import { Link, useParams, Navigate } from 'react-router-dom';
-import { ArrowLeft, ChevronRight, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, CheckCircle2 } from 'lucide-react';
 import { services } from '../data/services';
 import { useState } from 'react';
 
@@ -101,28 +101,6 @@ export default function ServiceDetail() {
           <div className="mt-8 rounded-2xl bg-gray-50 p-6 md:p-10">
             <h2 className="font-display text-2xl font-bold">{tab}</h2>
             <div className="mt-4">{content[tab]}</div>
-          </div>
-
-          <div className="mt-12 grid gap-6 sm:grid-cols-3">
-            {services
-              .filter((s) => s.slug !== service.slug)
-              .slice(0, 3)
-              .map((s) => (
-                <Link
-                  key={s.slug}
-                  to={`/services/${s.slug}`}
-                  className="group rounded-2xl border border-gray-100 bg-white p-5 transition hover:-translate-y-0.5 hover:shadow-lg"
-                >
-                  <p className="text-xs font-semibold uppercase tracking-widest text-brand-600">
-                    {s.category}
-                  </p>
-                  <p className="mt-2 font-bold">{s.title}</p>
-                  <p className="mt-1 text-sm text-gray-600 line-clamp-2">{s.description}</p>
-                  <span className="mt-4 inline-flex items-center gap-1 text-sm text-brand-600 group-hover:text-brand-700">
-                    Read more <ChevronRight size={14} />
-                  </span>
-                </Link>
-              ))}
           </div>
         </div>
       </section>
