@@ -136,6 +136,7 @@ export default function Footer() {
           </p>
           <p className="mt-3 text-white/60">
             Registered entities: Cliff Services Inc. (Virginia, USA) · Cliff Services Ltd (UK) ·
+            Cliff Software Consultancy Services Ltd (Ireland) · CLIFF SERVICES PTY LTD (Australia) ·
             Cliff Software Services India Pvt Ltd (Hyderabad, IN).
           </p>
           <div className="mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
