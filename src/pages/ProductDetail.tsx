@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link, Navigate, useLocation, useParams } from 'react-router-dom';
-import { ArrowLeft, ChevronRight, FileText, Mail, Milestone, Presentation, Rocket } from 'lucide-react';
+import { ArrowLeft, FileText, Mail, Milestone, Presentation, Rocket } from 'lucide-react';
 import { CONTACT, PRODUCTS } from '../data/site';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -27,7 +27,6 @@ export default function ProductDetail() {
 
   if (!product) return <Navigate to="/#products" replace />;
 
-  const related = PRODUCTS.filter((p) => (p as Product).slug !== product.slug).slice(0, 3) as Product[];
   const docs = product.docs ?? {};
   const pricing = useMemo(() => {
     const lic = String(product.license ?? '').toLowerCase();
@@ -303,28 +302,6 @@ export default function ProductDetail() {
               </div>
             </div>
           </div>
-
-          {related.length > 0 && (
-            <div className="mt-14">
-              <h3 className="font-display text-2xl font-bold">More products</h3>
-              <div className="mt-6 grid gap-6 sm:grid-cols-3">
-                {related.map((p) => (
-                  <Link
-                    key={p.slug}
-                    to={`/products/${p.slug}`}
-                    className="group rounded-2xl border border-gray-100 bg-white p-5 transition hover:-translate-y-0.5 hover:shadow-lg"
-                  >
-                    <p className="text-xs font-semibold uppercase tracking-widest text-brand-600">Product</p>
-                    <p className="mt-2 font-bold">{p.name}</p>
-                    <p className="mt-1 text-sm text-gray-600 line-clamp-2">{p.blurb}</p>
-                    <span className="mt-4 inline-flex items-center gap-1 text-sm text-brand-600 group-hover:text-brand-700">
-                      View details <ChevronRight size={14} />
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
       </section>
     </>

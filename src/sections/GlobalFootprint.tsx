@@ -2,11 +2,11 @@ import { MapPin } from 'lucide-react';
 
 const COUNTRIES = [
   { country: 'United States', note: 'Herndon, VA, Global HQ' },
-  { country: 'United Kingdom', note: 'Founded 2008' },
-  { country: 'Ireland', note: '' },
-  { country: 'Canada', note: '' },
-  { country: 'Australia', note: '' },
-  { country: 'India', note: 'Hyderabad, Delivery Center' },
+  { country: 'United Kingdom', note: 'London, founded 2008' },
+  { country: 'Ireland', note: 'Dublin' },
+  { country: 'Canada', note: 'Mississauga' },
+  { country: 'Australia', note: 'Victoria' },
+  { country: 'India', note: '' },
 ];
 
 export default function GlobalFootprint() {
@@ -19,8 +19,8 @@ export default function GlobalFootprint() {
             Six countries, <span className="text-gradient">one delivery standard</span>
           </h2>
           <p className="mt-4 text-white/65">
-            Onsite account leadership in-market, with a Hyderabad delivery center providing 24×7
-            recruiting and delivery capacity. Nearshore (Mexico) and Middle East expansion underway.
+            Onsite account leadership in every market, with 24×7 delivery capacity across our global
+            network. Nearshore (Mexico) and Middle East expansion underway.
           </p>
         </div>
 

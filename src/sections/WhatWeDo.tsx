@@ -15,7 +15,7 @@ const LINES = [
   {
     icon: Stethoscope,
     title: 'Healthcare Revenue Cycle Management',
-    body: 'RCM, medical coding, and billing operations, HIPAA-aligned and offshore-scalable.',
+    body: 'RCM, medical coding, and billing operations, HIPAA-aligned and globally scalable.',
   },
   {
     icon: Users,
