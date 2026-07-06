@@ -18,13 +18,14 @@ const DIVERSITY: Diversity[] = [
     lead: 'Our flagship supplier-diversity credential, the basis of our Certified-Bench-as-a-Service positioning for prime vendors and MSPs.',
   },
   { code: 'NMSDC MBE', name: 'Minority Business Enterprise', status: 'In progress' },
+  { code: 'HIPAA', name: 'Health data compliance, BAA-ready for PHI', status: 'In progress' },
 ];
 
 const READINESS = [
-  'US Corporation, Cliff Services Inc. (EIN), Virginia',
+  'US Corporation, Cliff Services Inc., Virginia',
   'E-Verify enrolled, federal employment verification',
   "Workers' compensation & liability insurance (COI on request)",
-  'Background check program, Sterling / Checkr',
+  'Background check program',
 ];
 
 const NETWORKS = ['SAP Ariba', 'Beeline', 'Coupa', 'IQNavigator / Workday', 'SAP Fieldglass'];
@@ -44,14 +45,14 @@ export default function Credentials() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-2">
+        <div className="mt-14 grid gap-6 lg:grid-cols-3">
           {DIVERSITY.map((d, i) => (
             <motion.div
               key={d.code}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: (i % 2) * 0.08, duration: 0.5 }}
+              transition={{ delay: (i % 3) * 0.08, duration: 0.5 }}
               className={`flex h-full flex-col rounded-2xl border p-6 transition ${
                 d.highlight
                   ? 'border-brand-400/50 bg-brand-500/[0.08] ring-1 ring-brand-400/30'
