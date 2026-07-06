@@ -480,7 +480,7 @@ export const services: Service[] = [
     differentiators: [
       'Certified coders (AAPC/AHIMA)',
       'AI-assisted denial prediction',
-      'HIPAA-compliant offshore delivery',
+      'HIPAA-compliant global delivery',
     ],
     approach: [
       'Revenue leakage audit',

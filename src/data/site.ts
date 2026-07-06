@@ -539,9 +539,9 @@ export const HOMEPAGE_STATS = [
     detail: 'US · UK · Ireland · Canada · Australia · India',
   },
   {
-    value: 'HQ + Delivery',
-    label: 'Herndon, VA & Hyderabad',
-    detail: '24×7 blended onsite–offshore delivery capacity',
+    value: 'Global HQ',
+    label: 'Herndon, Virginia',
+    detail: 'Onsite delivery leadership across six countries',
   },
   {
     value: 'Underway',

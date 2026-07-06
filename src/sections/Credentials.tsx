@@ -1,11 +1,23 @@
 import { motion } from 'framer-motion';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, Star } from 'lucide-react';
 
-type Diversity = { code: string; name: string; status: 'Active' | 'In progress' };
+type Diversity = {
+  code: string;
+  name: string;
+  status: 'Active' | 'In progress';
+  highlight?: boolean;
+  lead?: string;
+};
 
 const DIVERSITY: Diversity[] = [
+  {
+    code: 'Disability:IN DOBE',
+    name: 'Disability-Owned Business Enterprise',
+    status: 'In progress',
+    highlight: true,
+    lead: 'Our flagship supplier-diversity credential, the basis of our Certified-Bench-as-a-Service positioning for prime vendors and MSPs.',
+  },
   { code: 'NMSDC MBE', name: 'Minority Business Enterprise', status: 'In progress' },
-  { code: 'Disability:IN DOBE', name: 'Disability-Owned Business Enterprise', status: 'In progress' },
 ];
 
 const READINESS = [
@@ -32,31 +44,49 @@ export default function Credentials() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+        <div className="mt-14 grid gap-6 lg:grid-cols-2">
           {DIVERSITY.map((d, i) => (
             <motion.div
               key={d.code}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: (i % 3) * 0.08, duration: 0.5 }}
-              className="card-dark flex h-full flex-col"
+              transition={{ delay: (i % 2) * 0.08, duration: 0.5 }}
+              className={`flex h-full flex-col rounded-2xl border p-6 transition ${
+                d.highlight
+                  ? 'border-brand-400/50 bg-brand-500/[0.08] ring-1 ring-brand-400/30'
+                  : 'border-white/10 bg-white/[0.03] hover:border-white/20'
+              }`}
             >
               <div className="flex items-start justify-between gap-3">
-                <h3 className="font-display text-xl font-bold text-white">{d.code}</h3>
-                {d.status === 'Active' ? (
-                  <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-emerald-300">
-                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                    Active
-                  </span>
-                ) : (
-                  <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-amber-300">
-                    <span className="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse" />
-                    In progress
-                  </span>
-                )}
+                <div>
+                  {d.highlight && (
+                    <span className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-brand-400/40 bg-brand-500/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-brand-200">
+                      <Star size={12} className="fill-brand-300 text-brand-300" />
+                      Flagship credential
+                    </span>
+                  )}
+                  <h3
+                    className={`font-display font-bold text-white ${
+                      d.highlight ? 'text-2xl md:text-3xl' : 'text-xl'
+                    }`}
+                  >
+                    {d.code}
+                  </h3>
+                </div>
+                <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-amber-300">
+                  <span className="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse" />
+                  In progress
+                </span>
               </div>
-              <p className="mt-3 text-sm leading-relaxed text-white/65">{d.name}</p>
+              <p
+                className={`mt-3 text-sm leading-relaxed ${
+                  d.highlight ? 'text-white/85' : 'text-white/65'
+                }`}
+              >
+                {d.name}
+              </p>
+              {d.lead && <p className="mt-3 text-sm leading-relaxed text-white/70">{d.lead}</p>}
             </motion.div>
           ))}
         </div>

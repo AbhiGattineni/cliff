@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const TILES = [
   { title: '18 Years of SAP IS-U Depth', body: 'A dedicated utilities practice few firms our size can field.' },
-  { title: 'Blended Onsite–Offshore Delivery', body: 'In-market account leadership with 24×7 Hyderabad delivery capacity.' },
+  { title: 'Global Delivery Network', body: 'In-market account leadership with 24×7 delivery capacity across six countries.' },
   { title: 'Founder-Led Client Relationships', body: 'The discipline of a global firm with the attention of a founder-led one.' },
 ];
 

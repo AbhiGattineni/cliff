@@ -6,7 +6,7 @@ const COUNTRIES = [
   { country: 'Ireland', note: '' },
   { country: 'Canada', note: '' },
   { country: 'Australia', note: '' },
-  { country: 'India', note: 'Hyderabad, Delivery Center' },
+  { country: 'India', note: '' },
 ];
 
 export default function GlobalFootprint() {
@@ -19,8 +19,8 @@ export default function GlobalFootprint() {
             Six countries, <span className="text-gradient">one delivery standard</span>
           </h2>
           <p className="mt-4 text-white/65">
-            Onsite account leadership in-market, with a Hyderabad delivery center providing 24×7
-            recruiting and delivery capacity. Nearshore (Mexico) and Middle East expansion underway.
+            Onsite account leadership in every market, with 24×7 delivery capacity across our global
+            network. Nearshore (Mexico) and Middle East expansion underway.
           </p>
         </div>
 
