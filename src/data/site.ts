@@ -542,7 +542,7 @@ export const HOMEPAGE_STATS = [
   },
   {
     value: 'Global HQ',
-    label: 'Herndon, Virginia',
+    label: 'United Kingdom',
     detail: 'Onsite delivery leadership across six countries',
   },
   {
