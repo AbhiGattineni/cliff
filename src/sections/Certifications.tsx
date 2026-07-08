@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Award, ShieldCheck, Lock, FileCheck2, HeartPulse, BadgeCheck } from 'lucide-react';
+import { Award, ShieldCheck, Lock, HeartPulse, BadgeCheck } from 'lucide-react';
 
 type Cert = {
   icon: typeof Award;
@@ -51,15 +51,6 @@ const CERTS: Cert[] = [
     scope:
       'Design and operating effectiveness of Security, Availability, and Confidentiality controls for IT managed services, cloud and data engineering, clinical data management, and healthcare RCM.',
     tag: 'Report under NDA',
-  },
-  {
-    icon: FileCheck2,
-    code: 'SOC 3',
-    name: 'Public Assurance Report',
-    plain: 'The public, shareable summary of our SOC 2, no NDA required.',
-    scope:
-      'General-use report on Security, Availability, and Confidentiality controls for IT managed services, cloud and data engineering, clinical data management, and healthcare RCM.',
-    tag: 'Public report',
   },
   {
     icon: HeartPulse,

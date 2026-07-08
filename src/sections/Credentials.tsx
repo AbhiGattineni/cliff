@@ -17,7 +17,6 @@ const DIVERSITY: Diversity[] = [
     highlight: true,
     lead: 'Our flagship supplier-diversity credential, the basis of our Certified-Bench-as-a-Service positioning for prime vendors and MSPs.',
   },
-  { code: 'NMSDC MBE', name: 'Minority Business Enterprise', status: 'In progress' },
   { code: 'HIPAA', name: 'Health data compliance, BAA-ready for PHI', status: 'In progress' },
 ];
 

@@ -498,19 +498,6 @@ export const PRODUCTS = [
   },
 ];
 
-export const TRUSTED_LOGOS = [
-  'AT&T',
-  'AMERICAN AIRLINES',
-  'WIPRO',
-  'ACCENTURE',
-  'DELOITTE',
-  'IBM',
-  'CAPGEMINI',
-  'INFOSYS',
-  'TCS',
-  'HCL',
-];
-
 export const ROTATING_HEADINGS = [
   'Products',
   'Platforms',
