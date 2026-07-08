@@ -58,7 +58,7 @@ export default function Hero() {
               <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-white/10 bg-white/5 p-3 backdrop-blur">
                 <p className="text-xs uppercase tracking-widest text-brand-300">Global delivery</p>
                 <p className="mt-1 text-sm text-white/80">
-                  Herndon, Virginia headquarters with delivery teams across six countries and 24×7
+                  United Kingdom headquarters with delivery teams across six countries and 24×7
                   capacity.
                 </p>
               </div>
