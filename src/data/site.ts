@@ -522,8 +522,10 @@ export const CONTACT = {
   careersEmail: 'careers@cliffservice.com',
   phone: '+1 571-833-1719',
   phoneUk: '+44 330 133 4363',
+  officeCountry: 'United Kingdom',
+  officeCity: 'Melton Mowbray',
   office:
-    '13873 Park Center Road, Suite 181, Herndon, VA 20171, USA',
+    'Pera Business Park, Nottingham Road, Melton Mowbray, Leicestershire LE13 0PB',
 };
 
 /** Trust metrics shown on the homepage between Hero and About. */

@@ -110,9 +110,10 @@ export default function Footer() {
               </li>
               <li>
                 <div className="flex items-center gap-2 text-white/50 text-xs uppercase tracking-wider">
-                  <MapPin size={14} /> Main Office
+                  <MapPin size={14} /> {CONTACT.officeCountry}
                 </div>
-                <p className="mt-1 text-white/80">{CONTACT.office}</p>
+                <p className="mt-1 font-medium text-white/90">{CONTACT.officeCity}</p>
+                <p className="mt-0.5 text-white/70">{CONTACT.office}</p>
               </li>
             </ul>
 
