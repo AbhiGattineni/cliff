@@ -226,6 +226,39 @@ export const services: Service[] = [
     ],
   },
   {
+    slug: 'Mainframe-Modernization',
+    category: 'Technology',
+    title: 'Mainframe Modernization',
+    tagline: 'Legacy estates, modernized for cloud',
+    description:
+      'Assessment, replatforming, and refactoring of legacy mainframe estates to cloud, for enterprises and federal modernization programs.',
+    image: '/img/s8.jpg',
+    overview:
+      'We assess, replatform, and refactor legacy mainframe estates to the cloud, pairing COBOL, CICS, DB2, and JCL expertise with modern cloud engineering, for enterprises and federal modernization programs.',
+    whatWeDo: [
+      'Mainframe assessment and portfolio analysis',
+      'Replatforming and rehosting to cloud',
+      'COBOL/JCL refactoring and code conversion',
+      'DB2/CICS data and transaction migration',
+    ],
+    challenges: [
+      'Aging COBOL/JCL codebases and scarce skills',
+      'Tight coupling to CICS and DB2',
+      'Risk of big-bang migration failures',
+    ],
+    differentiators: [
+      'COBOL, CICS, DB2, and JCL specialists',
+      'Incremental, low-risk migration patterns',
+      'Legacy depth paired with modern cloud engineering',
+    ],
+    approach: [
+      'Estate assessment and dependency mapping',
+      'Target architecture and migration strategy',
+      'Incremental replatform and refactor waves',
+      'Validation, cutover, and decommission',
+    ],
+  },
+  {
     slug: 'Web-Development',
     category: 'Development',
     title: 'Web Development',

@@ -5,7 +5,7 @@ const LINES = [
   {
     icon: Cpu,
     title: 'Technology Project Delivery',
-    body: 'Outcome-based delivery across data engineering & analytics, cloud, cybersecurity, AI & GenAI, SAP, web technologies, and quality engineering.',
+    body: 'Outcome-based delivery across data engineering & analytics, cloud, cybersecurity, AI & GenAI, SAP, mainframe modernization, web technologies, and quality engineering.',
   },
   {
     icon: FlaskConical,

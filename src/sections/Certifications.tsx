@@ -86,7 +86,7 @@ export default function Certifications() {
           </h2>
           <p className="mt-4 text-white/65">
             Cliff Services delivers software and technology project delivery across data engineering,
-            cloud, cybersecurity, AI, SAP, web, and quality engineering; clinical data management;
+            cloud, cybersecurity, AI, SAP, mainframe modernization, web, and quality engineering; clinical data management;
             healthcare RCM; and IT and professional staffing. Our delivery processes are built to
             internationally recognized quality, security, and process-maturity frameworks, formal
             certification against the standards below is currently{' '}
