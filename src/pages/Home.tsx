@@ -4,6 +4,7 @@ import WhatWeDo from '../sections/WhatWeDo';
 import WhyCliff from '../sections/WhyCliff';
 import About from '../sections/About';
 import Certifications from '../sections/Certifications';
+import TechPartnerships from '../sections/TechPartnerships';
 import Credentials from '../sections/Credentials';
 import Services from '../sections/Services';
 import Industries from '../sections/Industries';
@@ -21,6 +22,7 @@ export default function Home() {
       <WhyCliff />
       <About />
       <Certifications />
+      <TechPartnerships />
       <Credentials />
       <Services />
       <Industries />
