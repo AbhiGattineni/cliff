@@ -34,7 +34,7 @@ export const services: Service[] = [
     tagline: 'Raising the bar for software quality',
     description:
       'Comprehensive software quality assurance services to ensure your applications meet the highest standards.',
-    image: '/img/s1.jpg',
+    image: '/img/s13.jpg',
     overview:
       'We deliver end-to-end quality engineering, from test strategy and automation to performance, security, and accessibility testing, so your releases ship with confidence.',
     whatWeDo: [
@@ -67,7 +67,7 @@ export const services: Service[] = [
     tagline: 'Beyond human cognition',
     description:
       'We provide advanced AI and Machine Learning solutions to optimize your business operations.',
-    image: '/img/s2.jpg',
+    image: '/img/s1.jpg',
     overview:
       'We have worked in AI/ML for over a decade, from foundational algorithms to modern neural networks, applying them to practical enterprise problems.',
     whatWeDo: [
@@ -100,7 +100,7 @@ export const services: Service[] = [
     tagline: 'Fortify every layer',
     description:
       'Secure your data with robust cybersecurity solutions and proactive risk assessment.',
-    image: '/img/s3.jpg',
+    image: '/img/s2.jpg',
     overview:
       'From zero-trust architectures to 24/7 managed detection, our security practice helps you anticipate, withstand, and recover from modern threats.',
     whatWeDo: [
@@ -133,7 +133,7 @@ export const services: Service[] = [
     tagline: 'Healthier outcomes through technology',
     description:
       'Innovative healthcare solutions to enhance patient care and streamline operations.',
-    image: '/img/s4.jpg',
+    image: '/img/s12.jpg',
     overview:
       'We partner with providers, payers and life-science innovators to modernize care delivery, unlock data, and improve outcomes, securely and at scale.',
     whatWeDo: [
@@ -166,7 +166,7 @@ export const services: Service[] = [
     tagline: 'From data to decisions',
     description:
       'Transform raw data into actionable insights with our BI solutions.',
-    image: '/img/s5.jpg',
+    image: '/img/s3.jpg',
     overview:
       'We turn sprawling datasets into clear, real-time decision surfaces, modern lakehouses, governed semantic layers and beautiful self-serve dashboards.',
     whatWeDo: [
@@ -199,7 +199,7 @@ export const services: Service[] = [
     tagline: 'Elastic, secure, unstoppable',
     description:
       'Scalable and secure cloud solutions to accelerate digital transformation.',
-    image: '/img/s6.jpg',
+    image: '/img/s4.jpg',
     overview:
       'We architect and operate cloud platforms on AWS, Azure and GCP, from green-field landing zones to complex mainframe migrations, with cost and security as first principles.',
     whatWeDo: [
@@ -232,7 +232,7 @@ export const services: Service[] = [
     tagline: 'Legacy estates, modernized for cloud',
     description:
       'Assessment, replatforming, and refactoring of legacy mainframe estates to cloud, for enterprises and federal modernization programs.',
-    image: '/img/s8.jpg',
+    image: '/img/s9.jpg',
     overview:
       'We assess, replatform, and refactor legacy mainframe estates to the cloud, pairing COBOL, CICS, DB2, and JCL expertise with modern cloud engineering, for enterprises and federal modernization programs.',
     whatWeDo: [
@@ -265,7 +265,7 @@ export const services: Service[] = [
     tagline: 'Experiences that move the business',
     description:
       'Custom web applications and responsive websites tailored to your needs.',
-    image: '/img/s7.jpg',
+    image: '/img/s5.jpg',
     overview:
       'Beautifully crafted, performance-obsessed web apps, built with React, Next.js and edge platforms, that look great, ship fast and convert.',
     whatWeDo: [
@@ -298,7 +298,7 @@ export const services: Service[] = [
     tagline: 'Mission-critical data, modernized',
     description:
       'Comprehensive Oracle solutions for database management and enterprise applications.',
-    image: '/img/s8.jpg',
+    image: '/img/s6.jpg',
     overview:
       'Our certified Oracle specialists help you extract more value from your Oracle estate, databases, EBS, Fusion and beyond, while reducing TCO.',
     whatWeDo: [
@@ -331,7 +331,7 @@ export const services: Service[] = [
     tagline: 'Run better on S/4HANA',
     description:
       'SAP implementation and support services to enhance business efficiency.',
-    image: '/img/s9.jpg',
+    image: '/img/s7.jpg',
     overview:
       'End-to-end SAP advisory and delivery, greenfield, brownfield and selective data migration, accelerating your move to S/4HANA.',
     whatWeDo: [
@@ -364,7 +364,7 @@ export const services: Service[] = [
     tagline: 'Clinical data you can trust',
     description:
       'SAS Clinical Data Management solutions to streamline clinical trials and research.',
-    image: '/img/s10.jpg',
+    image: '/img/s8.jpg',
     overview:
       'We help sponsors and CROs deliver high-quality, regulator-ready clinical data, from EDC setup through database lock, using SAS and modern standards.',
     whatWeDo: [
@@ -430,7 +430,7 @@ export const services: Service[] = [
     tagline: 'The right talent at the right time',
     description:
       'End-to-end workforce management solutions to optimize human resources.',
-    image: '/img/s12.jpg',
+    image: '/img/s10.jpg',
     overview:
       'Technology-enabled workforce solutions, permanent, contract and managed services, powered by skills-based matching and 18+ years of specialist sourcing.',
     whatWeDo: [
@@ -463,7 +463,7 @@ export const services: Service[] = [
     tagline: 'Seamless at any scale',
     description:
       'Global System Integrator solutions for seamless digital transformation.',
-    image: '/img/s13.jpg',
+    image: '/img/s11.jpg',
     overview:
       'Enterprise-grade systems integration across ERP, CRM, HCM and bespoke platforms, connected via modern event and API backbones.',
     whatWeDo: [
