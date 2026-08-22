@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Cloud, Server, BarChart3 } from 'lucide-react';
+import { Cloud, Server, BarChart3, Layers, Snowflake } from 'lucide-react';
 
 type Partnership = {
   icon: typeof Cloud;
@@ -37,6 +37,18 @@ const PARTNERSHIPS: Partnership[] = [
     track: 'Services track',
     backs: 'Data engineering and analytics delivery on Google Cloud.',
   },
+  {
+    icon: Layers,
+    program: 'Databricks Partner Program',
+    track: 'Consulting & Systems Integrator',
+    backs: 'Lakehouse migrations and data engineering delivery on Databricks.',
+  },
+  {
+    icon: Snowflake,
+    program: 'Snowflake Partner Network',
+    track: 'AI Data Cloud Services',
+    backs: 'Snowflake implementation and data platform services.',
+  },
 ];
 
 /**
@@ -44,8 +56,6 @@ const PARTNERSHIPS: Partnership[] = [
  * these are not memberships yet and must not be described as such.
  */
 const PENDING: PendingPartnership[] = [
-  { program: 'Databricks Partner Program', track: 'Consulting & Systems Integrator' },
-  { program: 'Snowflake Partner Network', track: 'AI Data Cloud Services' },
   { program: 'Red Hat Partner Program', track: 'Partner Connect' },
   { program: 'CrowdStrike Partner Program', track: 'Solution provider' },
   { program: 'SAS Partner Program', track: 'Services partner' },
