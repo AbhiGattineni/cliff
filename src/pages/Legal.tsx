@@ -1,9 +1,19 @@
+import { useSeo } from '../lib/seo';
+
 type LegalProps = {
   title: string;
   body: { h: string; p: string }[];
+  /** Route path, used for the canonical URL. */
+  path: string;
 };
 
-export default function Legal({ title, body }: LegalProps) {
+export default function Legal({ title, body, path }: LegalProps) {
+  useSeo({
+    title,
+    description: `${title} for Cliff Services Inc.`,
+    path,
+  });
+
   return (
     <section className="relative bg-ink-900 pt-28 pb-20 min-h-screen">
       <div className="absolute inset-0 -z-10 bg-grid-fade" />

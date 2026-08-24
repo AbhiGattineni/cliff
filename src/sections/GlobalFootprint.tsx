@@ -1,7 +1,7 @@
 import { MapPin } from 'lucide-react';
 
 const COUNTRIES = [
-  { country: 'United Kingdom', note: 'Melton Mowbray, Global HQ' },
+  { country: 'United Kingdom', note: 'Leicestershire, Global HQ' },
   { country: 'United States', note: 'Herndon, VA' },
   { country: 'Ireland', note: 'Dublin' },
   { country: 'Canada', note: 'Mississauga' },

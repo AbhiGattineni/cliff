@@ -1,4 +1,5 @@
 import { Mail, MapPin, Briefcase } from 'lucide-react';
+import { useSeo } from '../lib/seo';
 
 const CAREERS_EMAIL = 'careers@cliff-services.com';
 
@@ -142,7 +143,7 @@ const JOBS = [
   },
   {
     title: 'SAP S/4HANA Consultant',
-    location: 'Melton Mowbray, UK · Hybrid',
+    location: 'Leicestershire, UK · Hybrid',
     type: 'Full-time',
     team: 'Enterprise Solutions',
     overview:
@@ -255,6 +256,13 @@ function buildApplyMailto(job: Job) {
 }
 
 export default function Careers() {
+  useSeo({
+    title: 'Careers',
+    description:
+      'Open roles at Cliff Services Inc. across engineering, data, cloud, quality, and clinical delivery, with teams in the United States, United Kingdom, and India.',
+    path: '/careers',
+  });
+
   return (
     <>
       <section className="relative bg-ink-900 pt-28 pb-16 text-white">

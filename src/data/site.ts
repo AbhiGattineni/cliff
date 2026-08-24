@@ -7,7 +7,7 @@ export const LOCATIONS = [
   },
   {
     country: 'United Kingdom',
-    city: 'Melton Mowbray',
+    city: 'Leicestershire',
     address:
       'Pera Business Park, Nottingham Road, Melton Mowbray, Leicestershire LE13 0PB',
     flag: 'UK',
@@ -510,7 +510,7 @@ export const CONTACT = {
   phone: '+1 571-833-1719',
   phoneUk: '+44 330 133 4363',
   officeCountry: 'United Kingdom',
-  officeCity: 'Melton Mowbray',
+  officeCity: 'Leicestershire',
   office:
     'Pera Business Park, Nottingham Road, Melton Mowbray, Leicestershire LE13 0PB',
 };

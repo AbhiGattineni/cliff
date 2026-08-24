@@ -13,29 +13,29 @@ export default function Services() {
   );
 
   return (
-    <section id="services" className="relative bg-white py-24 text-gray-900">
+    <section id="services" className="relative bg-ink-900 py-24 lg:py-28">
       <div className="container-x">
         <div className="text-center">
-          <p className="eyebrow !text-brand-600">Our Services</p>
-          <h2 className="mt-4 font-display text-4xl font-extrabold md:text-5xl">
+          <p className="eyebrow">Our Services</p>
+          <h2 className="mt-4 font-display text-4xl font-black text-white md:text-5xl">
             Engineering & Technology Services
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-gray-600">
+          <p className="mx-auto mt-4 max-w-2xl text-white/65">
             We engineer, modernize, and secure enterprise platforms, turning requirements into
             production-grade systems and measurable outcomes, backed by experienced practitioners.
           </p>
         </div>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-2">
-          <span className="text-sm font-semibold text-gray-700">Explore Categories</span>
+          <span className="text-sm font-semibold text-white/70">Explore Categories</span>
           {SERVICE_CATEGORIES.map((c) => (
             <button
               key={c}
               onClick={() => setCat(c)}
               className={`rounded-full px-4 py-1.5 text-sm transition ${
                 cat === c
-                  ? 'bg-gradient-to-r from-brand-600 to-indigo-600 text-white shadow-md shadow-brand-500/30'
-                  : 'border border-gray-200 bg-white text-gray-700 hover:bg-gray-50'
+                  ? 'bg-gradient-to-r from-brand-500 to-indigo-500 text-white shadow-md shadow-brand-500/30'
+                  : 'border border-white/10 bg-white/5 text-white/70 hover:border-white/25 hover:text-white'
               }`}
             >
               {c}
@@ -51,9 +51,9 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: (i % 6) * 0.05 }}
-              className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-gray-100 transition hover:-translate-y-1 hover:shadow-xl"
+              className="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
             >
-              <div className="aspect-[4/2.6] overflow-hidden bg-gray-100">
+              <div className="aspect-[4/2.6] overflow-hidden bg-black/40">
                 <img
                   src={s.image}
                   alt={s.title}
@@ -61,14 +61,14 @@ export default function Services() {
                 />
               </div>
               <div className="p-6">
-                <p className="text-xs font-semibold uppercase tracking-widest text-brand-600">
+                <p className="text-xs font-semibold uppercase tracking-widest text-brand-300">
                   {s.category}
                 </p>
-                <h3 className="mt-2 text-xl font-bold text-gray-900">{s.title}</h3>
-                <p className="mt-2 text-sm text-gray-600">{s.description}</p>
+                <h3 className="mt-2 text-xl font-bold text-white">{s.title}</h3>
+                <p className="mt-2 text-sm text-white/65">{s.description}</p>
                 <Link
                   to={`/services/${s.slug}`}
-                  className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-brand-600 hover:text-brand-700"
+                  className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-brand-300 transition hover:text-brand-200"
                 >
                   Discover More <ArrowUpRight size={14} />
                 </Link>
