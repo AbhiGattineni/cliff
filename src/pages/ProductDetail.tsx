@@ -4,6 +4,7 @@ import { ArrowLeft, FileText, Mail, Milestone, Presentation, Rocket } from 'luci
 import { CONTACT, PRODUCTS } from '../data/site';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { useSeo } from '../lib/seo';
 
 type TimelineItem = { label: string; detail: string; duration: string };
 type Product = (typeof PRODUCTS)[number] & {
@@ -24,6 +25,16 @@ export default function ProductDetail() {
   const product = PRODUCTS.find((p) => (p as Product).slug === slug) as Product | undefined;
   const [tab, setTab] = useState<Tab>('Paper Writing');
   const location = useLocation();
+
+  // Called before the early return below so hook order stays stable.
+  useSeo({
+    title: product ? product.name : 'Products',
+    description: product
+      ? product.blurb
+      : 'Product concepts and platforms from Cliff Services Inc.',
+    path: `/products/${slug ?? ''}`,
+    noindex: !product,
+  });
 
   if (!product) return <Navigate to="/#products" replace />;
 

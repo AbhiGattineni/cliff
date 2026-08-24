@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail } from 'lucide-react';
+import { useSeo } from '../lib/seo';
 const GithubIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" width={16} height={16}>
     <path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.95 3.21 9.14 7.66 10.62.56.1.77-.24.77-.54v-1.9c-3.12.68-3.78-1.5-3.78-1.5-.51-1.3-1.24-1.65-1.24-1.65-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.6 1.21 3.23.92.1-.72.39-1.21.71-1.49-2.49-.28-5.11-1.25-5.11-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15.9-.25 1.87-.37 2.83-.38.96.01 1.93.13 2.83.38 2.15-1.45 3.1-1.15 3.1-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.62 5.27-5.12 5.55.4.34.76 1.02.76 2.06v3.05c0 .3.2.65.78.54 4.44-1.48 7.65-5.67 7.65-10.62C23.25 5.48 18.27.5 12 .5z" />
@@ -8,6 +9,13 @@ const GithubIcon = () => (
 );
 
 export default function LoginSignup() {
+  useSeo({
+    title: 'Sign In',
+    description: 'Access the Cliff Services client portal.',
+    path: '/loginsignup',
+    noindex: true,
+  });
+
   const [mode, setMode] = useState<'login' | 'signup'>('login');
 
   return (

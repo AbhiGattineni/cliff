@@ -1,3 +1,4 @@
+import { useSeo } from '../lib/seo';
 import Hero from '../sections/Hero';
 import HomeStats from '../sections/HomeStats';
 import WhatWeDo from '../sections/WhatWeDo';
@@ -14,6 +15,13 @@ import ClosingCTA from '../sections/ClosingCTA';
 import Contact from '../sections/Contact';
 
 export default function Home() {
+  useSeo({
+    title: 'Cliff Services Inc. | Global IT Solutions, Clinical Services, RCM & Professional Staffing',
+    description:
+      'Cliff Services Inc. delivers technology projects, clinical and life-sciences services, healthcare revenue cycle management, and professional staffing across six countries since 2008.',
+    path: '/',
+  });
+
   return (
     <>
       <Hero />

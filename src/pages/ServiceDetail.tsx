@@ -2,6 +2,7 @@ import { Link, useParams, Navigate } from 'react-router-dom';
 import { ArrowLeft, CheckCircle2 } from 'lucide-react';
 import { services } from '../data/services';
 import { useState } from 'react';
+import { useSeo } from '../lib/seo';
 
 const TABS = ['Overview', 'What We Do', 'Challenges & Solutions', 'Our Differentiators', 'Our Approaches'] as const;
 
@@ -9,6 +10,21 @@ export default function ServiceDetail() {
   const { slug } = useParams();
   const service = services.find((s) => s.slug === slug);
   const [tab, setTab] = useState<(typeof TABS)[number]>('Overview');
+
+  // Called before the early return below so hook order stays stable.
+  useSeo({
+    // Several titles already end in "Services", avoid "QA Services Services".
+    title: service
+      ? /services$/i.test(service.title)
+        ? service.title
+        : `${service.title} Services`
+      : 'Services',
+    description: service
+      ? `${service.tagline}. ${service.description}`
+      : 'Engineering and technology services from Cliff Services Inc.',
+    path: `/services/${slug ?? ''}`,
+    noindex: !service,
+  });
 
   if (!service) return <Navigate to="/#services" replace />;
 

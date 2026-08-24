@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import CookieBanner from './components/CookieBanner';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
+import NotFound from './pages/NotFound';
 import ServiceDetail from './pages/ServiceDetail';
 import ProductDetail from './pages/ProductDetail';
 import Careers from './pages/Careers';
@@ -22,11 +23,11 @@ export default function App() {
           <Route path="/products/:slug" element={<ProductDetail />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/loginsignup" element={<LoginSignup />} />
-          <Route path="/privacy" element={<Legal title="Privacy Policy" body={PRIVACY_BODY} />} />
-          <Route path="/cookies" element={<Legal title="Cookie Statement" body={COOKIES_BODY} />} />
-          <Route path="/terms" element={<Legal title="Terms of Service" body={TERMS_BODY} />} />
-          <Route path="/accessibility" element={<Legal title="Accessibility Statement" body={ACCESSIBILITY_BODY} />} />
-          <Route path="*" element={<Home />} />
+          <Route path="/privacy" element={<Legal title="Privacy Policy" body={PRIVACY_BODY} path="/privacy" />} />
+          <Route path="/cookies" element={<Legal title="Cookie Statement" body={COOKIES_BODY} path="/cookies" />} />
+          <Route path="/terms" element={<Legal title="Terms of Service" body={TERMS_BODY} path="/terms" />} />
+          <Route path="/accessibility" element={<Legal title="Accessibility Statement" body={ACCESSIBILITY_BODY} path="/accessibility" />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />
