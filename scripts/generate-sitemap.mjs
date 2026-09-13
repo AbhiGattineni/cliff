@@ -38,7 +38,12 @@ const entries = [
   })),
 ];
 
-// /loginsignup and the 404 page are intentionally excluded, both are noindex.
+// The 404 page is intentionally excluded — it is noindex.
+//
+// The staff/consultant portal is not listed here either, and never should be.
+// It lives on its own host (portal.cliffservices.com), is served by a different
+// project entirely, and is reached by a link shared with the people who need
+// it — not advertised from the marketing site.
 
 const today = new Date().toISOString().slice(0, 10);
 const body = entries
