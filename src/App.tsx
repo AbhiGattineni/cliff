@@ -8,7 +8,6 @@ import NotFound from './pages/NotFound';
 import ServiceDetail from './pages/ServiceDetail';
 import ProductDetail from './pages/ProductDetail';
 import Careers from './pages/Careers';
-import LoginSignup from './pages/LoginSignup';
 import Legal, { PRIVACY_BODY, COOKIES_BODY, TERMS_BODY, ACCESSIBILITY_BODY } from './pages/Legal';
 
 export default function App() {
@@ -22,7 +21,6 @@ export default function App() {
           <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/products/:slug" element={<ProductDetail />} />
           <Route path="/careers" element={<Careers />} />
-          <Route path="/loginsignup" element={<LoginSignup />} />
           <Route path="/privacy" element={<Legal title="Privacy Policy" body={PRIVACY_BODY} path="/privacy" />} />
           <Route path="/cookies" element={<Legal title="Cookie Statement" body={COOKIES_BODY} path="/cookies" />} />
           <Route path="/terms" element={<Legal title="Terms of Service" body={TERMS_BODY} path="/terms" />} />

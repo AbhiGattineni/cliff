@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /loginsignup
 
 Sitemap: https://www.cliffservices.com/sitemap.xml
