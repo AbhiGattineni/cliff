@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Cloud, Server, BarChart3, Layers, Snowflake } from 'lucide-react';
+import { Cloud, Server, BarChart3, Layers, Snowflake, Container, BrainCircuit } from 'lucide-react';
 
 type Partnership = {
   icon: typeof Cloud;
@@ -7,6 +7,13 @@ type Partnership = {
   track: string;
   /** What client-facing work this partnership actually backs. */
   backs: string;
+  /**
+   * 'Active' is a confirmed membership. 'Enrolled' is accepted into the program
+   * but with vendor checks still outstanding, which is a real distinction and
+   * not a softer word for the same thing, so it gets its own pill rather than
+   * being rounded up to Active.
+   */
+  status: 'Active' | 'Enrolled';
 };
 
 type PendingPartnership = {
@@ -15,8 +22,11 @@ type PendingPartnership = {
 };
 
 /**
- * Active memberships only, these are confirmed by the vendor and can be stated as fact.
- * When a program in PENDING is approved, move it up here with an icon and a `backs` line.
+ * Programs we are actually in, each carrying its own status. Everything here is
+ * confirmed by the vendor and can be stated as fact; what `status` says is how
+ * far through that vendor's own process we are.
+ * When a program in PENDING is approved, move it up here with an icon, a `backs`
+ * line and a status.
  */
 const PARTNERSHIPS: Partnership[] = [
   {
@@ -24,30 +34,52 @@ const PARTNERSHIPS: Partnership[] = [
     program: 'AWS Partner Network',
     track: 'Services Path',
     backs: 'Cloud migration and data engineering delivery on AWS.',
+    status: 'Active',
   },
   {
     icon: Server,
     program: 'IBM Partner Plus',
     track: 'Registered partner',
     backs: 'Our mainframe modernization practice, from IBM Z environments to hybrid cloud.',
+    status: 'Active',
   },
   {
     icon: BarChart3,
     program: 'Google Cloud Partner Advantage',
     track: 'Services track',
     backs: 'Data engineering and analytics delivery on Google Cloud.',
+    status: 'Active',
   },
   {
     icon: Layers,
     program: 'Databricks Partner Program',
     track: 'Consulting & Systems Integrator',
     backs: 'Lakehouse migrations and data engineering delivery on Databricks.',
+    status: 'Active',
   },
   {
     icon: Snowflake,
     program: 'Snowflake Partner Network',
     track: 'AI Data Cloud Services',
     backs: 'Snowflake implementation and data platform services.',
+    status: 'Active',
+  },
+  {
+    icon: Container,
+    program: 'Red Hat Partner Program',
+    track: 'Partner Connect',
+    backs: 'Enterprise Linux, OpenShift, and container platform delivery.',
+    status: 'Active',
+  },
+  {
+    icon: BrainCircuit,
+    program: 'Microsoft AI Cloud Partner Program',
+    // The track slot is a short label, set in uppercase letter-spaced caps —
+    // the verification status belongs in the body, not shouted here.
+    track: 'AI Cloud Partner',
+    backs:
+      'Azure and Microsoft AI delivery, alongside our wider cloud and data practice. Identity verification is complete; employment verification is in progress.',
+    status: 'Enrolled',
   },
 ];
 
@@ -56,7 +88,6 @@ const PARTNERSHIPS: Partnership[] = [
  * these are not memberships yet and must not be described as such.
  */
 const PENDING: PendingPartnership[] = [
-  { program: 'Red Hat Partner Program', track: 'Partner Connect' },
   { program: 'CrowdStrike Partner Program', track: 'Solution provider' },
   { program: 'SAS Partner Program', track: 'Services partner' },
 ];
@@ -93,9 +124,15 @@ export default function TechPartnerships() {
                   <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-brand-300">
                     <Ico size={20} />
                   </span>
-                  <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-emerald-300">
-                    Active
-                  </span>
+                  {p.status === 'Active' ? (
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-emerald-300">
+                      Active
+                    </span>
+                  ) : (
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-sky-400/30 bg-sky-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-sky-300">
+                      Enrolled
+                    </span>
+                  )}
                 </div>
                 <h3 className="mt-5 font-display text-xl font-bold text-white">{p.program}</h3>
                 <p className="mt-1 text-xs font-semibold uppercase tracking-widest text-brand-300">
@@ -130,7 +167,8 @@ export default function TechPartnerships() {
           </div>
           <p className="mt-5 text-sm leading-relaxed text-white/60">
             Programs marked in review are submitted applications awaiting vendor approval, they are
-            not active memberships. This section is updated as each approval is confirmed.
+            not active memberships. Enrolled means accepted into the program with vendor
+            verification still to complete. This section is updated as each approval is confirmed.
           </p>
         </div>
 

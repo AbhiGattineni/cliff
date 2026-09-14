@@ -9,6 +9,7 @@ import TechPartnerships from '../sections/TechPartnerships';
 import Credentials from '../sections/Credentials';
 import Services from '../sections/Services';
 import Industries from '../sections/Industries';
+import Quantum from '../sections/Quantum';
 import Staffing from '../sections/Staffing';
 import GlobalFootprint from '../sections/GlobalFootprint';
 import ClosingCTA from '../sections/ClosingCTA';
@@ -34,6 +35,7 @@ export default function Home() {
       <Credentials />
       <Services />
       <Industries />
+      <Quantum />
       <Staffing />
       <GlobalFootprint />
       <ClosingCTA />

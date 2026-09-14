@@ -4,18 +4,38 @@ import { CheckCircle2, Star } from 'lucide-react';
 type Diversity = {
   code: string;
   name: string;
-  status: 'Active' | 'In progress';
+  status: 'Certified' | 'In progress';
   highlight?: boolean;
   lead?: string;
+  /**
+   * Certification mark. Optional on purpose: a credential is certified whether or
+   * not the issuer has sent artwork yet, and the card reserves no space when the
+   * field is absent. The Disability:IN seal drops in here when it arrives, with
+   * no other change to this file.
+   */
+  logo?: { src: string; alt: string };
 };
 
+/**
+ * Certification numbers and validity dates are deliberately not published here.
+ * They are available to buyers on request, and a date on a page is a date that
+ * goes stale without anyone noticing.
+ */
 const DIVERSITY: Diversity[] = [
   {
     code: 'Disability:IN DOBE',
     name: 'Disability-Owned Business Enterprise',
-    status: 'In progress',
+    status: 'Certified',
     highlight: true,
-    lead: 'Our flagship supplier-diversity credential, the basis of our Certified-Bench-as-a-Service positioning for prime vendors and MSPs.',
+    lead: "Cliff Services Ltd is a certified Disability-Owned Business Enterprise through Disability:IN's International track, the basis of our Certified-Bench-as-a-Service positioning for prime vendors and MSPs.",
+  },
+  {
+    code: 'MSDUK',
+    name: 'Minority Supplier Development UK',
+    status: 'Certified',
+    highlight: true,
+    lead: 'Cliff Services holds MSDUK certification, giving us recognized diversity-supplier status in the UK market alongside our Disability:IN DOBE certification in the same entity.',
+    logo: { src: '/img/msduk.jpg', alt: 'MSDUK' },
   },
   { code: 'HIPAA', name: 'Health data compliance, BAA-ready for PHI', status: 'In progress' },
 ];
@@ -39,8 +59,13 @@ export default function Credentials() {
             Ready for <span className="text-gradient">vendor onboarding</span>
           </h2>
           <p className="mt-4 text-white/65">
-            Cliff Services maintains the diversity certifications and procurement credentials that
-            enterprise and public-sector buyers look for during supplier onboarding.
+            Cliff Services holds diversity-supplier certifications in both the US and UK markets,
+            Disability:IN DOBE and MSDUK, giving procurement teams on either side of the Atlantic a
+            certified, audit-ready diversity partner rather than a self-declared one.
+          </p>
+          <p className="mt-4 text-white/65">
+            Alongside them we maintain the procurement credentials that enterprise and public-sector
+            buyers look for during supplier onboarding.
           </p>
         </div>
 
@@ -74,9 +99,9 @@ export default function Credentials() {
                     {d.code}
                   </h3>
                 </div>
-                {d.status === 'Active' ? (
+                {d.status === 'Certified' ? (
                   <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-emerald-300">
-                    Active
+                    Certified
                   </span>
                 ) : (
                   <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-amber-300">
@@ -93,6 +118,17 @@ export default function Credentials() {
                 {d.name}
               </p>
               {d.lead && <p className="mt-3 text-sm leading-relaxed text-white/70">{d.lead}</p>}
+              {d.logo && (
+                <>
+                  <div className="flex-1" />
+                  {/* The mark is supplied dark-on-white, so it sits on its own white
+                      plate rather than on the card. Inverting or knocking out a
+                      certification body's logo is not ours to do. */}
+                  <div className="mt-5 inline-flex w-fit items-center rounded-xl bg-white px-4 py-2.5">
+                    <img src={d.logo.src} alt={d.logo.alt} className="h-6 w-auto" loading="lazy" />
+                  </div>
+                </>
+              )}
             </motion.div>
           ))}
         </div>
