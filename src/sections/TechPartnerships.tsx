@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Cloud, Server, BarChart3, Layers, Snowflake, Container, BrainCircuit } from 'lucide-react';
+import { Cloud, Server, BarChart3, Layers, Snowflake, Container, BrainCircuit, ShieldCheck } from 'lucide-react';
 
 type Partnership = {
   icon: typeof Cloud;
@@ -72,6 +72,13 @@ const PARTNERSHIPS: Partnership[] = [
     status: 'Active',
   },
   {
+    icon: ShieldCheck,
+    program: 'CrowdStrike Partner Program',
+    track: 'Solution provider',
+    backs: 'Endpoint and cloud workload security across our managed services practice.',
+    status: 'Active',
+  },
+  {
     icon: BrainCircuit,
     program: 'Microsoft AI Cloud Partner Program',
     // The track slot is a short label, set in uppercase letter-spaced caps —
@@ -88,7 +95,6 @@ const PARTNERSHIPS: Partnership[] = [
  * these are not memberships yet and must not be described as such.
  */
 const PENDING: PendingPartnership[] = [
-  { program: 'CrowdStrike Partner Program', track: 'Solution provider' },
   { program: 'SAS Partner Program', track: 'Services partner' },
 ];
 
