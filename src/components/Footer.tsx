@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 
 const Icon = ({ path, ...p }: { path: string } & React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="currentColor" width={16} height={16} {...p}>
@@ -107,14 +107,6 @@ export default function Footer() {
                 <a href={`tel:${CONTACT.phone}`} className="mt-1 inline-block text-white hover:text-brand-300">
                   {CONTACT.phone}
                 </a>
-              </li>
-              <li>
-                <div className="flex items-center gap-2 text-white/50 text-xs uppercase tracking-wider">
-                  <MapPin size={14} /> Main Office
-                </div>
-                <p className="mt-1 font-medium text-white/90">{CONTACT.officeCountry}</p>
-                <p className="mt-0.5 text-white/70">{CONTACT.officeCity}</p>
-                <p className="mt-0.5 text-white/70">{CONTACT.office}</p>
               </li>
             </ul>
 

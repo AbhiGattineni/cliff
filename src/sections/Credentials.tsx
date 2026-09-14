@@ -27,7 +27,7 @@ const DIVERSITY: Diversity[] = [
     name: 'Disability-Owned Business Enterprise',
     status: 'Certified',
     highlight: true,
-    lead: "Cliff Services Ltd is a certified Disability-Owned Business Enterprise through Disability:IN's International track, the basis of our Certified-Bench-as-a-Service positioning for prime vendors and MSPs.",
+    lead: "Cliff Services is a certified Disability-Owned Business Enterprise through Disability:IN's International track, the basis of our Certified-Bench-as-a-Service positioning for prime vendors and MSPs.",
   },
   {
     code: 'MSDUK',
