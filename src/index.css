@@ -4,9 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Light is the default and dark is the variant, not the other way round.
-   `color-scheme` is set by the theme module on <html> so form controls and
-   scrollbars follow the page rather than the operating system. */
+/* Light is the default and dark is the variant. `color-scheme` is set by the
+   theme module on <html> so form controls and scrollbars follow the page
+   rather than the operating system. */
 
 html,
 body,
@@ -15,7 +15,7 @@ body,
 }
 
 body {
-  @apply bg-white text-slate-700 antialiased dark:bg-ink-900 dark:text-slate-300;
+  @apply bg-white text-slate-700 antialiased dark:bg-navy-950 dark:text-slate-300;
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -47,62 +47,91 @@ section[id] {
     @apply mx-auto max-w-6xl px-6 lg:px-8;
   }
 
-  /* One solid button, one quiet one. The old pair were a gradient pill with a
-     coloured glow and a translucent blur — both of which read as decoration
-     before they read as "click here". */
-  .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-700 dark:bg-brand-500 dark:hover:bg-brand-400 dark:text-ink-900;
+  /* Bands.
+     The page alternates between a light surface and a navy one. In dark mode
+     the light band becomes the darker of the two navies, so the alternation
+     survives rather than flattening into one colour. */
+  .band-light {
+    @apply bg-white dark:bg-navy-950;
   }
-  .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:bg-slate-50 dark:border-white/20 dark:text-slate-200 dark:hover:bg-white/5;
+  .band-tint {
+    @apply bg-slate-50 dark:bg-navy-900;
+  }
+  .band-navy {
+    @apply bg-navy-900 text-slate-300 dark:bg-navy-900;
   }
 
+  /* A navy band that lifts over the section above it on a large radius. This
+     is the join that does most of the work in the reference layout. */
+  .band-lift {
+    @apply relative -mt-10 rounded-t-[2rem] sm:rounded-t-[2.5rem];
+  }
+
+  /* Centred section header: a small gold eyebrow over a large heading. */
   .eyebrow {
-    @apply text-xs font-semibold uppercase tracking-[0.18em] text-brand-600 dark:text-brand-300;
+    @apply text-xs font-semibold uppercase tracking-[0.22em] text-[color:theme(colors.gold.ink)] dark:text-gold-400;
   }
-
-  /* Section heading and the line under it — used by every section so they
-     cannot drift apart. */
+  .eyebrow-on-navy {
+    @apply text-xs font-semibold uppercase tracking-[0.22em] text-gold-400;
+  }
   .h-section {
-    @apply font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white;
+    @apply font-display text-3xl font-bold leading-tight tracking-tight text-navy-900 sm:text-4xl dark:text-white;
+  }
+  .h-section-on-navy {
+    @apply font-display text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl;
   }
   .lede {
     @apply text-base leading-relaxed text-slate-600 dark:text-slate-400;
   }
-
-  .card {
-    @apply rounded-xl border border-slate-200 bg-white p-6 transition hover:border-slate-300 dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-white/20;
+  .lede-on-navy {
+    @apply text-base leading-relaxed text-slate-300;
   }
 
-  /* A band that inverts against the page, for one moment of contrast rather
-     than a whole site of it. */
-  .band {
-    @apply bg-slate-50 dark:bg-white/[0.02];
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold-500 px-6 py-3 text-sm font-semibold text-navy-950 transition hover:bg-gold-400;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-navy-900/20 px-6 py-3 text-sm font-semibold text-navy-900 transition hover:bg-navy-900/5 dark:border-white/25 dark:text-white dark:hover:bg-white/10;
+  }
+  .btn-on-navy {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/60 hover:bg-white/10;
+  }
+
+  /* Soft tinted card, the shape the reference uses for its numbers. */
+  .stat-card {
+    @apply rounded-2xl border border-slate-200/80 bg-slate-50 p-7 dark:border-white/10 dark:bg-white/[0.04];
+  }
+  .card-navy {
+    @apply rounded-2xl border border-white/10 bg-white/[0.04] p-7 transition hover:border-gold-500/40 hover:bg-white/[0.07];
   }
 
   .link-quiet {
-    @apply text-slate-600 transition hover:text-brand-600 dark:text-slate-400 dark:hover:text-brand-300;
+    @apply text-slate-600 transition hover:text-[color:theme(colors.gold.ink)] dark:text-slate-400 dark:hover:text-gold-400;
+  }
+  .link-on-navy {
+    @apply text-slate-300 transition hover:text-gold-400;
   }
 
   /* Pages not yet moved to the new system keep their dark treatment and stay
      readable on a light default. Remove the wrapper when the page is redone. */
   .legacy-dark {
-    @apply bg-ink-900 text-slate-300;
+    @apply bg-navy-950 text-slate-300;
   }
 }
 
-/* Still used by the pages this pass did not touch — Careers, the service and
-   product detail pages, Legal and 404. Kept so they look exactly as they did
-   rather than half-converted; it goes when they do. */
+/* Still used by the pages this pass did not touch: Careers, the service and
+   product detail pages, Legal and the 404. Kept so they look as they did
+   rather than half-converted, and it goes when they do. */
 .text-gradient {
-  background: linear-gradient(90deg, #a78bfa 0%, #60a5fa 50%, #34d399 100%);
+  background: linear-gradient(90deg, #e1bc42 0%, #d4af36 55%, #b3922c 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
+
 :focus-visible {
-  outline: 2px solid theme('colors.brand.600');
+  outline: 2px solid theme('colors.gold.500');
   outline-offset: 2px;
   border-radius: 6px;
 }

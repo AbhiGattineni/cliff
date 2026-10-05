@@ -19,7 +19,7 @@ export default function CookieBanner() {
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 p-4">
-      <div className="container-x rounded-xl border border-slate-200 bg-white/95 p-5 shadow-lg backdrop-blur dark:border-white/10 dark:bg-ink-800/95 dark:shadow-black/50">
+      <div className="container-x rounded-xl border border-slate-200 bg-white/95 p-5 shadow-lg backdrop-blur dark:border-white/10 dark:bg-navy-800/95 dark:shadow-black/50">
         <div className="grid gap-4 lg:grid-cols-[1fr_auto] lg:items-center">
           <p className="text-sm text-slate-600 dark:text-slate-300">
             This site uses cookies and related technologies, as described in our Cookie Statement,

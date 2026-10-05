@@ -1,12 +1,15 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { ArrowUpRight, Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 
-// Five links, matching the five sections the home page now has. The old nav
-// pointed at #about and #certifications, which no longer exist, and its
-// primary button offered a "Capability Statement" that was an anchor to the
-// contact form rather than a download.
+// A navy bar in both themes, the way the reference keeps one.
+//
+// Always solid rather than transparent at the top. Every page here opens on a
+// dark hero today, but a transparent header is a trap the moment one does not,
+// and a brand bar that changes colour as you scroll is movement for its own
+// sake. Four links, matching the four sections the home page has, plus the one
+// button that matters.
 
 const LINKS = [
   { href: '/#what-we-do', label: 'What we do' },
@@ -16,8 +19,7 @@ const LINKS = [
 ];
 
 function NavLink({ href, label, onClick }: { href: string; label: string; onClick?: () => void }) {
-  const className =
-    'text-sm font-medium text-slate-600 transition hover:text-slate-900 dark:text-slate-400 dark:hover:text-white';
+  const className = 'text-sm font-medium text-slate-200 transition hover:text-gold-400';
   if (href.startsWith('/#')) {
     return (
       <a href={href} className={className} onClick={onClick}>
@@ -34,7 +36,7 @@ function NavLink({ href, label, onClick }: { href: string; label: string; onClic
 
 export default function Navbar() {
   // Read once at mount rather than setting state inside the effect: a reload
-  // part-way down the page should draw the border immediately, not a frame
+  // part-way down the page should draw the shadow immediately, not a frame
   // later.
   const [scrolled, setScrolled] = useState(
     () => typeof window !== 'undefined' && window.scrollY > 10
@@ -59,20 +61,14 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-40 bg-white/90 backdrop-blur transition dark:bg-ink-900/90 ${
-        scrolled ? 'border-b border-slate-200 dark:border-white/10' : 'border-b border-transparent'
+      className={`fixed inset-x-0 top-0 z-40 bg-navy-900 transition ${
+        scrolled ? 'shadow-lg shadow-navy-950/30' : ''
       }`}
     >
       <div className="container-x flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2.5">
-          <img
-            src="/img/logo.jpg"
-            alt=""
-            className="h-8 w-8 rounded-md object-cover"
-          />
-          <span className="font-display text-base font-semibold text-slate-900 dark:text-white">
-            Cliff Services
-          </span>
+          <img src="/img/logo.jpg" alt="" className="h-8 w-8 rounded-md object-cover" />
+          <span className="font-display text-base font-semibold text-white">Cliff Services</span>
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
@@ -83,14 +79,17 @@ export default function Navbar() {
 
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <a href="/#contact" className="hidden btn-primary !px-4 !py-2 sm:inline-flex">
-            Talk to us
+          <a
+            href="/#contact"
+            className="hidden items-center gap-1.5 rounded-full border border-gold-500/70 px-4 py-1.5 text-sm font-semibold text-gold-400 transition hover:bg-gold-500 hover:text-navy-950 sm:inline-flex"
+          >
+            Talk to us <ArrowUpRight size={14} />
           </a>
           <button
             aria-label={open ? 'Close menu' : 'Open menu'}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="rounded-lg border border-slate-200 p-2 text-slate-700 lg:hidden dark:border-white/15 dark:text-slate-200"
+            className="rounded-lg border border-white/20 p-2 text-white lg:hidden"
           >
             {open ? <X size={18} /> : <Menu size={18} />}
           </button>
@@ -98,13 +97,13 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="border-t border-slate-200 bg-white lg:hidden dark:border-white/10 dark:bg-ink-900">
+        <div className="border-t border-white/10 bg-navy-900 lg:hidden">
           <div className="container-x flex flex-col gap-4 py-5">
             {LINKS.map((l) => (
               <NavLink key={l.href} {...l} onClick={() => setOpen(false)} />
             ))}
             <a href="/#contact" className="btn-primary mt-1 self-start" onClick={() => setOpen(false)}>
-              Talk to us
+              Talk to us <ArrowUpRight size={14} />
             </a>
           </div>
         </div>
