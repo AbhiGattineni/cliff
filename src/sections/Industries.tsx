@@ -1,6 +1,6 @@
 // Industries, as a list rather than seven icon cards.
 //
-// Each one was a card with its own icon tile and a sentence of copy; together
+// Each one was a card with its own icon tile and a sentence of copy. Together
 // they filled a screen to say "we work in regulated and enterprise sectors".
 // The names are the information.
 

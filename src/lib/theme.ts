@@ -3,13 +3,13 @@
 // Light is the default, deliberately: this is a company site people land on
 // from a search result or an email, and the dark treatment it used to ship
 // with is a preference, not a starting point. The system setting is NOT
-// consulted for that reason — someone whose laptop is in dark mode has not
+// consulted for that reason. Someone whose laptop is in dark mode has not
 // asked this site to be dark, and a corporate site that renders differently
 // for half its visitors is a support question waiting to happen.
 //
 // The class goes on <html> rather than <body> so Tailwind's `dark:` variants
 // and the base styles in index.css both see it. Applying it before first paint
-// is the job of the inline script in index.html; this module keeps it in sync
+// is the job of the inline script in index.html. This module keeps it in sync
 // afterwards.
 
 export type Theme = 'light' | 'dark';
@@ -22,7 +22,7 @@ export function storedTheme(): Theme | null {
     const v = localStorage.getItem(THEME_KEY);
     return v === 'light' || v === 'dark' ? v : null;
   } catch {
-    return null; // private mode or blocked storage — the default stands
+    return null; // private mode or blocked storage, so the default stands
   }
 }
 

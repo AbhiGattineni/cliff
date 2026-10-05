@@ -49,7 +49,7 @@ export default function Navbar() {
   }, []);
 
   // Close the mobile menu when the route changes, adjusted during render
-  // rather than in an effect — an effect here renders the menu open for a
+  // rather than in an effect. An effect here renders the menu open for a
   // frame on the new page before closing it.
   const [lastKey, setLastKey] = useState(location.key);
   if (location.key !== lastKey) {

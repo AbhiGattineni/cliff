@@ -5,7 +5,7 @@ import { CONTACT, LOCATIONS } from '../data/site';
 // Three columns and a legal line.
 //
 // Gone with the rest: a newsletter form whose submit handler called
-// preventDefault and nothing else — it collected addresses into the void — and
+// preventDefault and nothing else, collecting addresses into the void, and
 // four navigation links (#about, #certifications, #credentials, #services)
 // pointing at sections that no longer exist. A footer link that scrolls
 // nowhere is worse than one that isn't there.
@@ -122,7 +122,7 @@ export default function Footer() {
             Quality &amp; security certification program underway: ISO 9001, ISO 27001, SOC 2 Type II.
           </p>
           <div className="mt-4 flex flex-col items-start justify-between gap-3 text-xs text-slate-500 sm:flex-row sm:items-center dark:text-slate-500">
-            <p>© 2008–2026 Cliff Services Inc. All rights reserved.</p>
+            <p>© 2008-2026 Cliff Services Inc. All rights reserved.</p>
             <div className="flex flex-wrap gap-5">
               {LEGAL.map((l) => (
                 <Link key={l.to} to={l.to} className="transition hover:text-slate-900 dark:hover:text-white">

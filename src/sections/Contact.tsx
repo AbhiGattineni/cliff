@@ -5,7 +5,7 @@ import { CONTACT } from '../data/site';
 //
 // What was here was a name/email/subject/message form whose submit handler set
 // a "thanks, we'll be in touch within 1 business day" message and did nothing
-// else — no endpoint, no mail, nothing. A form that drops what people type is
+// else. No endpoint, no mail, nothing. A form that drops what people type is
 // worse than no form, so until one is wired up this says how to reach us and
 // every route on it works.
 

@@ -24,7 +24,7 @@ const LINES = [
   {
     icon: Stethoscope,
     title: 'Healthcare revenue cycle',
-    body: 'Revenue cycle management, medical coding and billing operations — HIPAA-aligned and globally scalable.',
+    body: 'Revenue cycle management, medical coding and billing operations, HIPAA-aligned and globally scalable.',
   },
   {
     icon: Users,

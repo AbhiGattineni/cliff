@@ -2,10 +2,10 @@ import { HOMEPAGE_STATS, LOCATIONS } from '../data/site';
 
 // The facts a buyer actually checks, on one line each.
 //
-// This is what is left of five sections — stats, about, certifications, tech
-// partnerships and credentials — which between them said "since 2008", "six
+// This is what is left of five sections (stats, about, certifications, tech
+// partnerships and credentials) which between them said "since 2008", "six
 // countries" and "certified" at considerable length. The two certifications
-// that genuinely differentiate the company are named here; the rest were
+// that genuinely differentiate the company are named here. The rest were
 // either in progress or a logo wall.
 
 const CERTIFIED = [
@@ -44,8 +44,8 @@ export default function Proof() {
             <ul className="mt-4 space-y-3">
               {CERTIFIED.map((c) => (
                 <li key={c.name} className="text-sm">
-                  <span className="font-semibold text-slate-900 dark:text-white">{c.name}</span>
-                  <span className="text-slate-600 dark:text-slate-400"> — {c.detail}</span>
+                  <span className="block font-semibold text-slate-900 dark:text-white">{c.name}</span>
+                  <span className="text-slate-600 dark:text-slate-400">{c.detail}</span>
                 </li>
               ))}
             </ul>

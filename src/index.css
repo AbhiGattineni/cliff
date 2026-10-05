@@ -23,7 +23,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Anchored sections sit under a fixed header; without this the heading lands
+/* Anchored sections sit under a fixed header. Without this the heading lands
    behind it on every in-page jump. */
 section[id] {
   scroll-margin-top: 5rem;

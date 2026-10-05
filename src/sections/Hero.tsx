@@ -20,7 +20,7 @@ export default function Hero() {
 
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-400">
           Cliff Services delivers technology projects, clinical and life-sciences work, healthcare
-          revenue cycle management and professional staffing — through one global delivery model.
+          revenue cycle management and professional staffing, through one global delivery model.
         </p>
 
         <div className="mt-9 flex flex-wrap items-center gap-3">

@@ -30,7 +30,7 @@ const JOBS = [
     ],
     qualifications: [
       '3+ years of hands-on ML engineering experience with production deployments.',
-      'Strong Python skills; experience with model evaluation and metrics.',
+      'Strong Python skills, with experience in model evaluation and metrics.',
       'Solid understanding of supervised learning, embeddings, and basic MLOps practices.',
       'Ability to communicate trade-offs clearly to non-ML stakeholders.',
     ],
@@ -45,7 +45,7 @@ const JOBS = [
       'Build modern web experiences and APIs that power our product catalog, customer portals, and internal tooling, fast, accessible, and secure.',
     responsibilities: [
       'Deliver frontend features in React with strong UX and performance.',
-      'Build and maintain APIs and integrations; ensure reliability and security.',
+      'Build and maintain APIs and integrations, keeping them reliable and secure.',
       'Write maintainable, tested code and review PRs with a quality mindset.',
       'Collaborate with design to ship polished UI and smooth user journeys.',
     ],
@@ -72,7 +72,7 @@ const JOBS = [
     ],
     qualifications: [
       '5+ years in cloud architecture or platform engineering roles.',
-      'Deep experience in at least one major cloud provider; familiarity with others is a plus.',
+      'Deep experience in at least one major cloud provider. Familiarity with others is a plus.',
       'Strong knowledge of IAM, networking, observability, and incident response fundamentals.',
       'Experience with infrastructure-as-code and modern deployment practices.',
     ],
@@ -84,7 +84,7 @@ const JOBS = [
     type: 'Full-time',
     team: 'Security',
     overview:
-      'Monitor, triage, and investigate security events; help improve detection engineering and incident response readiness across cloud and on-prem environments.',
+      'Monitor, triage, and investigate security events, and help improve detection engineering and incident response readiness across cloud and on-prem environments.',
     responsibilities: [
       'Triage alerts, investigate incidents, and document outcomes clearly.',
       'Improve playbooks, alert quality, and detection coverage.',
@@ -134,7 +134,7 @@ const JOBS = [
       'Support experimentation measurement and basic forecasting where needed.',
     ],
     qualifications: [
-      '2+ years in analytics; strong SQL and data storytelling skills.',
+      '2+ years in analytics, with strong SQL and data storytelling skills.',
       'Experience building dashboards and defining KPI frameworks.',
       'Comfort working with ambiguous questions and structuring analysis.',
       'Strong communication and stakeholder management skills.',
@@ -150,7 +150,7 @@ const JOBS = [
       'Lead SAP S/4HANA implementations and optimizations across finance, logistics, and operations, driving measurable business outcomes with clean process design.',
     responsibilities: [
       'Run discovery workshops, gather requirements, and define target processes.',
-      'Configure and validate SAP modules; support integrations and testing.',
+      'Configure and validate SAP modules, supporting integrations and testing.',
       'Produce functional specs, documentation, and user training materials.',
       'Support go-live planning and hypercare.',
     ],
@@ -214,7 +214,7 @@ const JOBS = [
     responsibilities: [
       'Own delivery plans, timelines, and dependency management.',
       'Run execution rituals (status, risks, change control) and keep teams aligned.',
-      'Track outcomes, quality, and operational metrics; improve delivery processes.',
+      'Track outcomes, quality, and operational metrics, and improve delivery processes.',
       'Coordinate releases and ensure clear communication to stakeholders.',
     ],
     qualifications: [
@@ -241,7 +241,7 @@ function buildApplyMailto(job: Job) {
     `- Current location/timezone:`,
     `- LinkedIn/GitHub/Portfolio:`,
     ``,
-    `Relevant experience summary (please write 4–6 bullet points):`,
+    `Relevant experience summary (please write 4-6 bullet points):`,
     `-`,
     ``,
     `Why I’m a fit for this role:`,

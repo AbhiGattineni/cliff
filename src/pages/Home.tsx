@@ -10,9 +10,9 @@ import Contact from '../sections/Contact';
 // What went: HomeStats, WhyCliff, About, Certifications, TechPartnerships,
 // Credentials, Quantum, Staffing, GlobalFootprint and ClosingCTA. Between
 // them they repeated "since 2008", "six countries" and "certified" four times
-// over, and pushed the one thing a visitor came for — what this company does,
-// and how to reach it — below several screens of scrolling. The facts worth
-// keeping are in Proof; the rest is in the history.
+// over, and pushed the one thing a visitor came for (what this company does,
+// and how to reach it) below several screens of scrolling. The facts worth
+// keeping are in Proof. The rest is in the history.
 
 export default function Home() {
   useSeo({
