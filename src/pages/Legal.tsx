@@ -15,7 +15,7 @@ export default function Legal({ title, body, path }: LegalProps) {
   });
 
   return (
-    <section className="relative bg-ink-900 pt-28 pb-20 min-h-screen">
+    <section className="legacy-dark relative min-h-screen pt-28 pb-20">
       <div className="absolute inset-0 -z-10 bg-grid-fade" />
       <div className="container-x max-w-3xl">
         <p className="eyebrow">Legal</p>

@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  // Light is the default; `dark` is put on <html> by the theme toggle.
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {

@@ -10,6 +10,23 @@
       content="Cliff Services Inc. is a global information technology solutions and services company, technology project delivery, clinical & life sciences services, healthcare RCM, and professional staffing across six countries since 2008."
     />
     <title>Cliff Services Inc. | Global IT Solutions, Clinical Services, RCM & Professional Staffing</title>
+    <!-- Applies the remembered theme before first paint. Without this the page
+         renders light and then flips, which is worse than either theme. Light
+         is the default: no stored choice means no `dark` class. -->
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem('cliff:theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+            document.documentElement.style.colorScheme = 'dark';
+          } else {
+            document.documentElement.style.colorScheme = 'light';
+          }
+        } catch (e) {
+          /* blocked storage — light, as designed */
+        }
+      })();
+    </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

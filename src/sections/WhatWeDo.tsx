@@ -1,64 +1,81 @@
-import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Cpu, FlaskConical, Stethoscope, Users } from 'lucide-react';
+import { services } from '../data/services';
+
+// The four service lines, and the capabilities under them.
+//
+// The capability list used to be its own section: fifteen cards with a
+// category filter above them, which is a lot of machinery for what is really a
+// list of links. It is folded in here instead, because "what we do" and "the
+// things we do it with" are one question, and because those fifteen detail
+// pages have no other way in.
 
 const LINES = [
   {
     icon: Cpu,
-    title: 'Technology Project Delivery',
-    body: 'Outcome-based delivery across data engineering & analytics, cloud, cybersecurity, AI & GenAI, SAP, mainframe modernization, web technologies, and quality engineering.',
+    title: 'Technology project delivery',
+    body: 'Data engineering and analytics, cloud, cybersecurity, AI and GenAI, SAP, mainframe modernization, web, and quality engineering.',
   },
   {
     icon: FlaskConical,
-    title: 'Clinical & Life Sciences',
-    body: 'SAS clinical programming, clinical data management, biostatistics, and pharmacovigilance for pharma, biotech, and CROs.',
+    title: 'Clinical & life sciences',
+    body: 'SAS clinical programming, clinical data management, biostatistics and pharmacovigilance for pharma, biotech and CROs.',
   },
   {
     icon: Stethoscope,
-    title: 'Healthcare Revenue Cycle Management',
-    body: 'RCM, medical coding, and billing operations, HIPAA-aligned and globally scalable.',
+    title: 'Healthcare revenue cycle',
+    body: 'Revenue cycle management, medical coding and billing operations — HIPAA-aligned and globally scalable.',
   },
   {
     icon: Users,
-    title: 'Professional Staffing & RPO',
-    body: 'IT and professional talent across technology, engineering, clinical & scientific, healthcare operations, finance & accounting, and business support roles.',
+    title: 'Professional staffing & RPO',
+    body: 'Technology, engineering, clinical and scientific, healthcare operations, finance and business support roles.',
   },
 ];
 
 export default function WhatWeDo() {
   return (
-    <section id="what-we-do" className="relative bg-ink-900 py-24 lg:py-28">
+    <section id="what-we-do" className="py-20 sm:py-24">
       <div className="container-x">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="eyebrow">What We Do</p>
-          <h2 className="mt-4 font-display text-4xl font-black text-white md:text-5xl">
-            Four service lines, <span className="text-gradient">one delivery engine</span>
-          </h2>
-          <p className="mt-4 text-white/65">
-            Whether you need an outcome delivered, an operation run, or talent placed, every
-            engagement runs through the same quality-managed, security-focused global delivery model.
-          </p>
-        </div>
+        <h2 className="h-section">What we do</h2>
+        <p className="lede mt-4 max-w-2xl">
+          Four service lines, one delivery model. Whether you need an outcome delivered, an
+          operation run, or talent placed, the same teams and the same controls stand behind it.
+        </p>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2">
-          {LINES.map((l, i) => {
-            const Ico = l.icon;
+        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+          {LINES.map((l) => {
+            const Icon = l.icon;
             return (
-              <motion.div
-                key={l.title}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: (i % 2) * 0.08, duration: 0.5 }}
-                className="card-dark flex h-full flex-col"
-              >
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-brand-300">
-                  <Ico size={20} />
-                </span>
-                <h3 className="mt-5 font-display text-xl font-bold text-white">{l.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/65">{l.body}</p>
-              </motion.div>
+              <div key={l.title} className="card">
+                <Icon size={20} className="text-brand-600 dark:text-brand-300" />
+                <h3 className="mt-4 font-display text-lg font-semibold text-slate-900 dark:text-white">
+                  {l.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                  {l.body}
+                </p>
+              </div>
             );
           })}
+        </div>
+
+        <div id="services" className="mt-14 border-t border-slate-200 pt-10 dark:border-white/10">
+          <h3 className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
+            Capabilities
+          </h3>
+          <ul className="mt-5 grid gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((s) => (
+              <li key={s.slug}>
+                <Link
+                  to={`/services/${s.slug}`}
+                  className="group inline-flex items-baseline gap-2 text-sm text-slate-700 transition hover:text-brand-600 dark:text-slate-300 dark:hover:text-brand-300"
+                >
+                  <span className="underline-offset-4 group-hover:underline">{s.title}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

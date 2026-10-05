@@ -1,19 +1,18 @@
 import { useSeo } from '../lib/seo';
 import Hero from '../sections/Hero';
-import HomeStats from '../sections/HomeStats';
 import WhatWeDo from '../sections/WhatWeDo';
-import WhyCliff from '../sections/WhyCliff';
-import About from '../sections/About';
-import Certifications from '../sections/Certifications';
-import TechPartnerships from '../sections/TechPartnerships';
-import Credentials from '../sections/Credentials';
-import Services from '../sections/Services';
+import Proof from '../sections/Proof';
 import Industries from '../sections/Industries';
-import Quantum from '../sections/Quantum';
-import Staffing from '../sections/Staffing';
-import GlobalFootprint from '../sections/GlobalFootprint';
-import ClosingCTA from '../sections/ClosingCTA';
 import Contact from '../sections/Contact';
+
+// Five sections, down from fifteen.
+//
+// What went: HomeStats, WhyCliff, About, Certifications, TechPartnerships,
+// Credentials, Quantum, Staffing, GlobalFootprint and ClosingCTA. Between
+// them they repeated "since 2008", "six countries" and "certified" four times
+// over, and pushed the one thing a visitor came for — what this company does,
+// and how to reach it — below several screens of scrolling. The facts worth
+// keeping are in Proof; the rest is in the history.
 
 export default function Home() {
   useSeo({
@@ -26,19 +25,9 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <HomeStats />
       <WhatWeDo />
-      <WhyCliff />
-      <About />
-      <Certifications />
-      <TechPartnerships />
-      <Credentials />
-      <Services />
+      <Proof />
       <Industries />
-      <Quantum />
-      <Staffing />
-      <GlobalFootprint />
-      <ClosingCTA />
       <Contact />
     </>
   );
