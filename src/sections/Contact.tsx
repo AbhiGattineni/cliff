@@ -1,90 +1,85 @@
-import { useState } from 'react';
-import { LOCATIONS } from '../data/site';
-import { CheckCircle2 } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
+import { CONTACT } from '../data/site';
+
+// Contact, by the routes that actually reach someone.
+//
+// What was here was a name/email/subject/message form whose submit handler set
+// a "thanks, we'll be in touch within 1 business day" message and did nothing
+// else. No endpoint, no mail, nothing. A form that drops what people type is
+// worse than no form, so until one is wired up this says how to reach us and
+// every route on it works.
 
 export default function Contact() {
-  const [sent, setSent] = useState(false);
-
   return (
-    <section id="contact" className="relative bg-ink-900 py-24 lg:py-28">
+    <section
+      id="contact"
+      className="band border-t border-slate-200 py-20 sm:py-24 dark:border-white/10"
+    >
       <div className="container-x">
-        <div className="grid gap-10 lg:grid-cols-2">
+        <div className="grid gap-12 lg:grid-cols-[1fr_1fr]">
           <div>
-            <p className="eyebrow">Get In Touch</p>
-            <h2 className="mt-3 font-display text-4xl font-black text-white md:text-5xl">Contact Us</h2>
-            <p className="mt-3 max-w-md text-white/65">
-              We'd love to hear from you. Fill out the form and a member of our team will reach
-              out within 1 business day.
+            <h2 className="h-section">Talk to us</h2>
+            <p className="lede mt-4 max-w-md">
+              Tell us what you need delivered, run, or staffed. We answer within one business day.
             </p>
 
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                setSent(true);
-              }}
-              className="mt-8 grid gap-4"
-            >
-              <div className="grid gap-4 sm:grid-cols-2">
-                <label className="block">
-                  <span className="text-sm font-medium text-white/70">Name</span>
-                  <input
-                    required
-                    type="text"
-                    className="mt-1 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-white/35 outline-none focus:border-brand-400"
-                  />
-                </label>
-                <label className="block">
-                  <span className="text-sm font-medium text-white/70">Email</span>
-                  <input
-                    required
-                    type="email"
-                    className="mt-1 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-white/35 outline-none focus:border-brand-400"
-                  />
-                </label>
-              </div>
-              <label className="block">
-                <span className="text-sm font-medium text-white/70">Subject</span>
-                <input
-                  type="text"
-                  className="mt-1 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-white/35 outline-none focus:border-brand-400"
-                />
-              </label>
-              <label className="block">
-                <span className="text-sm font-medium text-white/70">Message</span>
-                <textarea
-                  rows={5}
-                  required
-                  className="mt-1 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-white/35 outline-none focus:border-brand-400"
-                />
-              </label>
-              <button type="submit" className="btn-primary w-fit">
-                Submit
-              </button>
-              {sent && (
-                <p className="inline-flex items-center gap-2 text-sm text-emerald-600">
-                  <CheckCircle2 size={16} /> Thanks! We'll be in touch shortly.
-                </p>
-              )}
-            </form>
-          </div>
-
-          <div>
-            <h3 className="font-display text-2xl font-bold text-white">Our Locations</h3>
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              {LOCATIONS.map((l) => (
-                <div
-                  key={l.country}
-                  className="rounded-2xl border border-white/10 bg-white/[0.03] p-5"
-                >
-                  <p className="text-xs font-semibold uppercase tracking-widest text-brand-600">
-                    {l.country}
-                  </p>
-                  <p className="mt-2 text-lg font-semibold">{l.city}</p>
-                  <p className="mt-2 text-sm text-white/65">{l.address}</p>
-                </div>
-              ))}
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href={`mailto:${CONTACT.email}`} className="btn-primary">
+                <Mail size={16} /> {CONTACT.email}
+              </a>
+              <a href={`tel:${CONTACT.phone.replace(/\s/g, '')}`} className="btn-ghost">
+                <Phone size={16} /> {CONTACT.phone}
+              </a>
             </div>
           </div>
+
+          <dl className="grid gap-6 text-sm sm:grid-cols-2 lg:pt-4">
+            <div>
+              <dt className="font-semibold text-slate-900 dark:text-white">General enquiries</dt>
+              <dd className="mt-1">
+                <a href={`mailto:${CONTACT.email}`} className="link-quiet underline-offset-4 hover:underline">
+                  {CONTACT.email}
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-slate-900 dark:text-white">Careers</dt>
+              <dd className="mt-1">
+                <a
+                  href={`mailto:${CONTACT.careersEmail}`}
+                  className="link-quiet underline-offset-4 hover:underline"
+                >
+                  {CONTACT.careersEmail}
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-slate-900 dark:text-white">United States</dt>
+              <dd className="mt-1">
+                <a
+                  href={`tel:${CONTACT.phone.replace(/\s/g, '')}`}
+                  className="link-quiet underline-offset-4 hover:underline"
+                >
+                  {CONTACT.phone}
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-slate-900 dark:text-white">United Kingdom</dt>
+              <dd className="mt-1">
+                <a
+                  href={`tel:${CONTACT.phoneUk.replace(/\s/g, '')}`}
+                  className="link-quiet underline-offset-4 hover:underline"
+                >
+                  {CONTACT.phoneUk}
+                </a>
+              </dd>
+            </div>
+            <div className="sm:col-span-2">
+              <dt className="font-semibold text-slate-900 dark:text-white">Registered office</dt>
+              <dd className="mt-1 text-slate-600 dark:text-slate-400">{CONTACT.office}</dd>
+            </div>
+          </dl>
         </div>
       </div>
     </section>

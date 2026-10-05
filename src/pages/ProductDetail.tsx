@@ -56,7 +56,7 @@ export default function ProductDetail() {
       ``,
       `Company:`,
       `Role/title:`,
-      `Use case (2–3 lines):`,
+      `Use case (2-3 lines):`,
       `Preferred timeline:`,
       `Preferred meeting times/timezone:`,
       ``,
