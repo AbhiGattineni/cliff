@@ -181,7 +181,7 @@ export default function ProductDetail() {
 
   return (
     <>
-      <section className="relative bg-ink-900 pt-28 pb-10 text-white">
+      <section className="relative bg-navy-900 pt-28 pb-10 text-white">
         <div className="absolute inset-0 -z-10 bg-grid-fade" />
         <div className="container-x">
           <Link to="/#products" className="inline-flex items-center gap-1 text-sm text-white/60 hover:text-white">

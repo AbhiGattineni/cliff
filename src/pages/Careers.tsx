@@ -265,7 +265,7 @@ export default function Careers() {
 
   return (
     <>
-      <section className="relative bg-ink-900 pt-28 pb-16 text-white">
+      <section className="relative bg-navy-900 pt-28 pb-16 text-white">
         <div className="absolute inset-0 -z-10 bg-grid-fade" />
         <div className="container-x text-center">
           <p className="eyebrow">Careers</p>

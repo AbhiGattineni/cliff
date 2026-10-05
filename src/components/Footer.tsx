@@ -34,17 +34,23 @@ const LEGAL = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-white dark:border-white/10 dark:bg-ink-900">
-      <div className="container-x py-14">
+    <footer className="relative isolate overflow-hidden bg-navy-950 text-slate-300">
+      <img
+        src="/img/logo.jpg"
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -bottom-16 right-0 -z-10 w-72 opacity-[0.06] mix-blend-screen sm:w-96"
+      />
+      <div className="container-x py-16">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2.5">
               <img src="/img/logo.jpg" alt="" className="h-8 w-8 rounded-md object-cover" />
-              <span className="font-display text-base font-semibold text-slate-900 dark:text-white">
+              <span className="font-display text-base font-semibold text-white">
                 Cliff Services
               </span>
             </div>
-            <p className="mt-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+            <p className="mt-4 text-sm leading-relaxed text-slate-400">
               Technology projects, clinical and life-sciences services, healthcare revenue cycle
               management and professional staffing, across six countries since 2008.
             </p>
@@ -54,7 +60,7 @@ export default function Footer() {
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="rounded-lg border border-slate-200 p-2 text-slate-600 transition hover:bg-slate-50 hover:text-slate-900 dark:border-white/10 dark:text-slate-400 dark:hover:bg-white/5 dark:hover:text-white"
+                  className="rounded-lg border border-white/15 p-2 text-slate-300 transition hover:border-gold-500/60 hover:text-gold-400"
                 >
                   <Ico />
                 </a>
@@ -63,27 +69,27 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold text-slate-900 dark:text-white">Company</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-[0.22em] text-gold-400">Company</h4>
             <ul className="mt-4 space-y-2.5 text-sm">
-              <li><a href="/#what-we-do" className="link-quiet">What we do</a></li>
-              <li><a href="/#company" className="link-quiet">The company</a></li>
-              <li><a href="/#industries" className="link-quiet">Industries</a></li>
-              <li><Link to="/careers" className="link-quiet">Careers</Link></li>
-              <li><a href="/#contact" className="link-quiet">Contact</a></li>
+              <li><a href="/#what-we-do" className="link-on-navy">What we do</a></li>
+              <li><a href="/#company" className="link-on-navy">The company</a></li>
+              <li><a href="/#industries" className="link-on-navy">Industries</a></li>
+              <li><Link to="/careers" className="link-on-navy">Careers</Link></li>
+              <li><a href="/#contact" className="link-on-navy">Contact</a></li>
             </ul>
 
-            <h4 className="mt-8 text-sm font-semibold text-slate-900 dark:text-white">Offices</h4>
-            <p className="mt-3 text-sm text-slate-600 dark:text-slate-400">
+            <h4 className="mt-8 text-xs font-semibold uppercase tracking-[0.22em] text-gold-400">Offices</h4>
+            <p className="mt-4 text-sm text-slate-400">
               {LOCATIONS.map((l) => l.country).join(' · ')}
             </p>
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold text-slate-900 dark:text-white">Capabilities</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-[0.22em] text-gold-400">Capabilities</h4>
             <ul className="mt-4 space-y-2.5 text-sm">
               {services.map((s) => (
                 <li key={s.slug}>
-                  <Link to={`/services/${s.slug}`} className="link-quiet">
+                  <Link to={`/services/${s.slug}`} className="link-on-navy">
                     {s.title}
                   </Link>
                 </li>
@@ -92,40 +98,40 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold text-slate-900 dark:text-white">Contact</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-[0.22em] text-gold-400">Contact</h4>
             <ul className="mt-4 space-y-3 text-sm">
               <li>
-                <a href={`mailto:${CONTACT.email}`} className="link-quiet">{CONTACT.email}</a>
+                <a href={`mailto:${CONTACT.email}`} className="link-on-navy">{CONTACT.email}</a>
               </li>
               <li>
-                <a href={`mailto:${CONTACT.careersEmail}`} className="link-quiet">{CONTACT.careersEmail}</a>
+                <a href={`mailto:${CONTACT.careersEmail}`} className="link-on-navy">{CONTACT.careersEmail}</a>
               </li>
               <li>
-                <a href={`tel:${CONTACT.phone.replace(/\s/g, '')}`} className="link-quiet">
+                <a href={`tel:${CONTACT.phone.replace(/\s/g, '')}`} className="link-on-navy">
                   {CONTACT.phone}
                 </a>
-                <span className="text-slate-400 dark:text-slate-500"> · US</span>
+                <span className="text-slate-400"> · US</span>
               </li>
               <li>
-                <a href={`tel:${CONTACT.phoneUk.replace(/\s/g, '')}`} className="link-quiet">
+                <a href={`tel:${CONTACT.phoneUk.replace(/\s/g, '')}`} className="link-on-navy">
                   {CONTACT.phoneUk}
                 </a>
-                <span className="text-slate-400 dark:text-slate-500"> · UK</span>
+                <span className="text-slate-400"> · UK</span>
               </li>
             </ul>
-            <p className="mt-6 text-sm text-slate-600 dark:text-slate-400">{CONTACT.office}</p>
+            <p className="mt-6 text-sm text-slate-400">{CONTACT.office}</p>
           </div>
         </div>
 
-        <div className="mt-12 border-t border-slate-200 pt-6 dark:border-white/10">
-          <p className="text-xs text-slate-500 dark:text-slate-500">
+        <div className="mt-14 border-t border-white/10 pt-6">
+          <p className="text-xs text-slate-400">
             Quality &amp; security certification program underway: ISO 9001, ISO 27001, SOC 2 Type II.
           </p>
-          <div className="mt-4 flex flex-col items-start justify-between gap-3 text-xs text-slate-500 sm:flex-row sm:items-center dark:text-slate-500">
+          <div className="mt-4 flex flex-col items-start justify-between gap-3 text-xs text-slate-400 sm:flex-row sm:items-center">
             <p>© 2008-2026 Cliff Services Inc. All rights reserved.</p>
             <div className="flex flex-wrap gap-5">
               {LEGAL.map((l) => (
-                <Link key={l.to} to={l.to} className="transition hover:text-slate-900 dark:hover:text-white">
+                <Link key={l.to} to={l.to} className="transition hover:text-gold-400">
                   {l.label}
                 </Link>
               ))}
