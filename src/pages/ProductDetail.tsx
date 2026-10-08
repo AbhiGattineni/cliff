@@ -31,7 +31,7 @@ export default function ProductDetail() {
     title: product ? product.name : 'Products',
     description: product
       ? product.blurb
-      : 'Product concepts and platforms from Cliff Services Inc.',
+      : 'Product concepts and platforms from Cliff Services',
     path: `/products/${slug ?? ''}`,
     noindex: !product,
   });

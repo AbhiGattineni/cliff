@@ -259,7 +259,7 @@ export default function Careers() {
   useSeo({
     title: 'Careers',
     description:
-      'Open roles at Cliff Services Inc. across engineering, data, cloud, quality, and clinical delivery, with teams in the United States, United Kingdom, and India.',
+      'Open roles at Cliff Services across engineering, data, cloud, quality, and clinical delivery, with teams in the United States, United Kingdom, and India.',
     path: '/careers',
   });
 

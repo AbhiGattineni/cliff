@@ -16,9 +16,9 @@ import Contact from '../sections/Contact';
 
 export default function Home() {
   useSeo({
-    title: 'Cliff Services Inc. | Global IT Solutions, Clinical Services, RCM & Professional Staffing',
+    title: 'Cliff Services | Global IT Solutions, Clinical Services, RCM & Professional Staffing',
     description:
-      'Cliff Services Inc. delivers technology projects, clinical and life-sciences services, healthcare revenue cycle management, and professional staffing across six countries since 2008.',
+      'Cliff Services delivers technology projects, clinical and life-sciences services, healthcare revenue cycle management, and professional staffing across six countries since 2008.',
     path: '/',
   });
 

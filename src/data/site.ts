@@ -505,8 +505,8 @@ export const ROTATING_HEADINGS = [
 ];
 
 export const CONTACT = {
-  email: 'info@cliffservice.com',
-  careersEmail: 'careers@cliffservice.com',
+  email: 'info@cliff-services.com',
+  careersEmail: 'careers@cliff-services.com',
   phone: '+1 571-833-1719',
   phoneUk: '+44 330 133 4363',
   officeCountry: 'United Kingdom',

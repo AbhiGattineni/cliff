@@ -128,7 +128,7 @@ export default function Footer() {
             Quality &amp; security certification program underway: ISO 9001, ISO 27001, SOC 2 Type II.
           </p>
           <div className="mt-4 flex flex-col items-start justify-between gap-3 text-xs text-slate-400 sm:flex-row sm:items-center">
-            <p>© 2008-2026 Cliff Services Inc. All rights reserved.</p>
+            <p>© 2008-2026 Cliff Services All rights reserved.</p>
             <div className="flex flex-wrap gap-5">
               {LEGAL.map((l) => (
                 <Link key={l.to} to={l.to} className="transition hover:text-gold-400">
