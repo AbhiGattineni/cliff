@@ -10,7 +10,7 @@ type LegalProps = {
 export default function Legal({ title, body, path }: LegalProps) {
   useSeo({
     title,
-    description: `${title} for Cliff Services Inc.`,
+    description: `${title} for Cliff Services`,
     path,
   });
 
@@ -40,7 +40,7 @@ export const PRIVACY_BODY = [
   { h: 'How We Use Information', p: 'To provide and improve our services, communicate with you, comply with legal obligations and protect our legitimate interests.' },
   { h: 'Sharing', p: 'We do not sell your personal information. We share it with service providers under contract and as required by law.' },
   { h: 'Your Rights', p: 'Depending on your jurisdiction, you may have rights to access, correct, delete, or port your information. Contact us to exercise these rights.' },
-  { h: 'Contact', p: 'Questions? Email info@cliffservice.com.' },
+  { h: 'Contact', p: 'Questions? Email info@cliff-services.com.' },
 ];
 
 export const COOKIES_BODY = [
@@ -61,5 +61,5 @@ export const ACCESSIBILITY_BODY = [
   { h: 'Our Commitment', p: 'Cliff Services is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.' },
   { h: 'Conformance Status', p: 'We aim to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA. These guidelines explain how to make web content more accessible to people with a wide range of disabilities. Conformance is an ongoing effort and some content may not yet fully meet the standard.' },
   { h: 'Measures We Take', p: 'Accessibility is considered in our design and development process, including semantic markup, keyboard navigability, sufficient color contrast, and descriptive alternative text for meaningful images.' },
-  { h: 'Feedback', p: 'We welcome your feedback on the accessibility of this website. If you encounter barriers or need information in an alternative format, please contact us at info@cliffservice.com and we will respond as promptly as we can.' },
+  { h: 'Feedback', p: 'We welcome your feedback on the accessibility of this website. If you encounter barriers or need information in an alternative format, please contact us at info@cliff-services.com and we will respond as promptly as we can.' },
 ];

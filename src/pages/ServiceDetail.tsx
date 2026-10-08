@@ -21,7 +21,7 @@ export default function ServiceDetail() {
       : 'Services',
     description: service
       ? `${service.tagline}. ${service.description}`
-      : 'Engineering and technology services from Cliff Services Inc.',
+      : 'Engineering and technology services from Cliff Services',
     path: `/services/${slug ?? ''}`,
     noindex: !service,
   });

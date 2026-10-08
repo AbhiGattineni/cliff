@@ -6,7 +6,7 @@ import { useEffect } from 'react';
  * address search engines should be pointed at.
  */
 export const SITE_ORIGIN = 'https://www.cliffservices.com';
-export const SITE_NAME = 'Cliff Services Inc.';
+export const SITE_NAME = 'Cliff Services';
 
 type Seo = {
   /** Page title, without the site-name suffix. */
