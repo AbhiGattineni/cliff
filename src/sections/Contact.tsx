@@ -1,65 +1,91 @@
-import { ArrowUpRight, Mail, Phone } from 'lucide-react';
-import { CONTACT } from '../data/site';
+import { LOCATIONS, CONTACT } from '../data/site';
+import { Mail, Phone } from 'lucide-react';
 
-// Contact, by the routes that actually reach someone.
-//
-// What was here was a name, email, subject and message form whose submit
-// handler set "thanks, we'll be in touch within 1 business day" and did nothing
-// else. No endpoint, no mail, nothing. A form that drops what people type is
-// worse than no form, so until one is wired up this says how to reach us and
-// every route on it works.
-
-const ROUTES = [
-  { label: 'General enquiries', value: CONTACT.email, href: `mailto:${CONTACT.email}` },
-  { label: 'Careers', value: CONTACT.careersEmail, href: `mailto:${CONTACT.careersEmail}` },
-  {
-    label: 'United States',
-    value: CONTACT.phone,
-    href: `tel:${CONTACT.phone.replace(/\s/g, '')}`,
-  },
-  {
-    label: 'United Kingdom',
-    value: CONTACT.phoneUk,
-    href: `tel:${CONTACT.phoneUk.replace(/\s/g, '')}`,
-  },
-];
+// The form that used to sit here set "Thanks! We'll be in touch shortly." and
+// did nothing else. No endpoint, no mail. A form that drops what people type
+// is worse than no form, so these are the routes that actually reach someone.
 
 export default function Contact() {
   return (
-    <section id="contact" className="band-navy band-lift py-20 sm:py-28">
+    <section id="contact" className="relative bg-ink-900 py-24 lg:py-28">
       <div className="container-x">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="eyebrow-on-navy">Get in touch</p>
-          <h2 className="h-section-on-navy mt-4">Talk to us</h2>
-          <p className="lede-on-navy mt-5">
-            Tell us what you need delivered, run, or staffed. We answer within one business day.
-          </p>
-          <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-            <a href={`mailto:${CONTACT.email}`} className="btn-primary">
-              <Mail size={16} /> Email us <ArrowUpRight size={16} />
-            </a>
-            <a href={`tel:${CONTACT.phone.replace(/\s/g, '')}`} className="btn-on-navy">
-              <Phone size={16} /> {CONTACT.phone}
-            </a>
+        <div className="grid gap-10 lg:grid-cols-2">
+          <div>
+            <p className="eyebrow">Get In Touch</p>
+            <h2 className="mt-3 font-display text-4xl font-black text-white md:text-5xl">Contact Us</h2>
+            <p className="mt-3 max-w-md text-white/65">
+              We'd love to hear from you. Reach us directly and a member of our team will get
+              back within 1 business day.
+            </p>
+
+            <div className="mt-8 grid gap-5">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-brand-600">
+                  General enquiries
+                </p>
+                <a
+                  href={`mailto:${CONTACT.email}`}
+                  className="mt-1 inline-flex items-center gap-2 text-lg font-semibold text-white hover:text-brand-300"
+                >
+                  <Mail size={18} /> {CONTACT.email}
+                </a>
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-brand-600">
+                  Careers
+                </p>
+                <a
+                  href={`mailto:${CONTACT.careersEmail}`}
+                  className="mt-1 inline-flex items-center gap-2 text-lg font-semibold text-white hover:text-brand-300"
+                >
+                  <Mail size={18} /> {CONTACT.careersEmail}
+                </a>
+              </div>
+              <div className="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-widest text-brand-600">
+                    United States
+                  </p>
+                  <a
+                    href={`tel:${CONTACT.phone.replace(/\s/g, '')}`}
+                    className="mt-1 inline-flex items-center gap-2 text-lg font-semibold text-white hover:text-brand-300"
+                  >
+                    <Phone size={18} /> {CONTACT.phone}
+                  </a>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-widest text-brand-600">
+                    United Kingdom
+                  </p>
+                  <a
+                    href={`tel:${CONTACT.phoneUk.replace(/\s/g, '')}`}
+                    className="mt-1 inline-flex items-center gap-2 text-lg font-semibold text-white hover:text-brand-300"
+                  >
+                    <Phone size={18} /> {CONTACT.phoneUk}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="font-display text-2xl font-bold text-white">Our Locations</h3>
+            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              {LOCATIONS.map((l) => (
+                <div
+                  key={l.country}
+                  className="rounded-2xl border border-white/10 bg-white/[0.03] p-5"
+                >
+                  <p className="text-xs font-semibold uppercase tracking-widest text-brand-600">
+                    {l.country}
+                  </p>
+                  <p className="mt-2 text-lg font-semibold">{l.city}</p>
+                  <p className="mt-2 text-sm text-white/65">{l.address}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-
-        <dl className="mx-auto mt-16 grid max-w-4xl gap-8 border-t border-white/10 pt-10 text-sm sm:grid-cols-2 lg:grid-cols-4">
-          {ROUTES.map((r) => (
-            <div key={r.label}>
-              <dt className="font-semibold text-white">{r.label}</dt>
-              <dd className="mt-1.5">
-                <a href={r.href} className="link-on-navy underline-offset-4 hover:underline">
-                  {r.value}
-                </a>
-              </dd>
-            </div>
-          ))}
-          <div className="sm:col-span-2 lg:col-span-4">
-            <dt className="font-semibold text-white">Registered office</dt>
-            <dd className="mt-1.5 text-slate-300">{CONTACT.office}</dd>
-          </div>
-        </dl>
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 # cliffservices.com
 
-The public marketing site for **Cliff Services Inc.** — React + TypeScript + Vite + Tailwind,
+The public marketing site for **Cliff Services** — React + TypeScript + Vite + Tailwind,
 deployed on Vercel at [www.cliffservices.com](https://www.cliffservices.com).
 
 ## The other half
