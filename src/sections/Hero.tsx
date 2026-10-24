@@ -1,58 +1,69 @@
-import { ArrowUpRight } from 'lucide-react';
-
-// A photographic hero, centred, the way the reference does it.
-//
-// The photograph is a1.webp, Sydney at dusk, which is one of the six offices
-// rather than bought stock of someone pointing at a screen. It also happens to
-// be the palette: the sky is the navy the rest of the page is built from and
-// the building is lit in the gold of the logo. A scrim carries the type,
-// heaviest at the top where the fixed header sits and at the bottom where the
-// next section lifts over it.
+import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section id="home" className="relative isolate overflow-hidden bg-navy-950">
-      <img
-        src="/img/a1.webp"
-        alt=""
-        width={1110}
-        height={1022}
-        fetchPriority="high"
-        className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
-      />
-      <div
-        className="absolute inset-0 -z-10"
-        style={{
-          background:
-            'linear-gradient(180deg, rgba(8,15,34,0.88) 0%, rgba(8,15,34,0.42) 30%, rgba(8,15,34,0.34) 52%, rgba(8,15,34,0.72) 82%, rgba(8,15,34,0.96) 100%)',
-        }}
-      />
+    <section
+      id="home"
+      className="relative isolate min-h-screen overflow-hidden bg-ink-900 pt-24"
+    >
+      {/* background fx */}
+      <div className="absolute inset-0 -z-10 bg-grid-fade" />
+      <div className="absolute inset-0 -z-10 opacity-40">
+        <div className="absolute -top-40 left-1/3 h-96 w-96 rounded-full bg-brand-600/40 blur-3xl animate-pulse-slow" />
+        <div className="absolute top-1/2 -right-10 h-96 w-96 rounded-full bg-indigo-500/30 blur-3xl" />
+      </div>
 
-      <div className="container-x flex min-h-[32rem] flex-col items-center justify-center py-28 text-center sm:min-h-[36rem] sm:py-36">
-        <p className="eyebrow-on-navy">Global IT solutions and services since 2008</p>
+      <div className="container-x grid min-h-[calc(100vh-6rem)] items-center gap-10 py-10 lg:grid-cols-[1.1fr_1fr]">
+        <div>
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            Global IT Solutions &amp; Services · Since 2008
+          </div>
 
-        <h1
-          className="mt-5 max-w-3xl font-display text-4xl font-bold leading-[1.12] tracking-tight text-white sm:text-5xl lg:text-[3.4rem]"
-          style={{ textShadow: '0 2px 24px rgba(8,15,34,0.65)' }}
-        >
-          Technology, clinical and staffing services, delivered across six countries
-        </h1>
+          <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] text-white md:text-6xl">
+            Global Information Technology
+            <span className="block text-gradient">Solutions &amp; Services</span>
+          </h1>
 
-        <p
-          className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-100"
-          style={{ textShadow: '0 1px 16px rgba(8,15,34,0.7)' }}
-        >
-          Technology projects, clinical and life-sciences work, healthcare revenue cycle management
-          and professional staffing, through one global delivery model.
-        </p>
+          <p className="mt-6 max-w-xl text-lg text-white/70">
+            Technology project delivery, clinical and life-sciences services, healthcare revenue
+            cycle management, and professional staffing, delivered across six countries through a
+            blended global delivery model, since 2008.
+          </p>
 
-        <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-          <a href="#contact" className="btn-primary">
-            Talk to us <ArrowUpRight size={16} />
-          </a>
-          <a href="#what-we-do" className="btn-on-navy">
-            What we do
-          </a>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a href="#services" className="btn-primary">
+              Explore Our Services <ArrowRight size={16} />
+            </a>
+            <a href="#contact" className="btn-ghost">
+              Partner With Us
+            </a>
+          </div>
+
+        </div>
+
+        <div className="relative">
+          <div className="relative aspect-square w-full max-w-md mx-auto">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-brand-500/40 to-indigo-500/40 blur-3xl" />
+            <div className="relative h-full w-full rounded-[2rem] border border-white/10 bg-white/[0.03] overflow-hidden">
+              <img
+                src="/img/s1.jpg"
+                alt="Cliff Services global delivery"
+                className="h-full w-full object-cover"
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = '/img/s2.jpg';
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-white/10 bg-white/5 p-3 backdrop-blur">
+                <p className="text-xs uppercase tracking-widest text-brand-300">Global delivery</p>
+                <p className="mt-1 text-sm text-white/80">
+                  United Kingdom headquarters with delivery teams across six countries and 24×7
+                  capacity.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
