@@ -22,7 +22,7 @@ export const LOCATIONS = [
     country: 'India',
     city: 'Hyderabad, Telangana',
     address:
-      'Spacion Business Center, Hitec City, Hyderabad, Telangana, 500081 - IN',
+      'Cliff Software Services India Pvt. Ltd., 3rd Floor, Pramani Plaza, HIG-129, Road No. 4, KPHB Colony, KPHB Phase 3, Kukatpally, Hyderabad, Telangana, 500072 - IN',
     flag: 'IN',
   },
   {
