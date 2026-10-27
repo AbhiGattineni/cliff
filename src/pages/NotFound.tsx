@@ -16,7 +16,7 @@ export default function NotFound() {
   });
 
   return (
-    <section className="relative flex min-h-screen items-center bg-ink-900 pt-28 pb-20">
+    <section className="legacy-dark relative flex min-h-screen items-center pt-28 pb-20">
       <div className="absolute inset-0 -z-10 bg-grid-fade" />
       <div className="container-x max-w-2xl text-center">
         <p className="eyebrow">Error 404</p>

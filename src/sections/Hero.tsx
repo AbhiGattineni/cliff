@@ -1,70 +1,121 @@
-import { ArrowRight } from 'lucide-react';
+import {
+  ArrowRight,
+  ArrowUpRight,
+  CalendarDays,
+  Globe,
+  ShieldCheck,
+  Users,
+} from 'lucide-react';
+
+const STATS = [
+  { label: '6 Countries', Icon: Globe },
+  { label: 'Since 2008', Icon: CalendarDays },
+  { label: 'Global Delivery', Icon: Users },
+  { label: 'Trusted Partner', Icon: ShieldCheck },
+];
+
+const fadeLeft = 'linear-gradient(90deg, transparent 0%, #000 9%, #000 100%)';
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative isolate min-h-screen overflow-hidden bg-ink-900 pt-24"
+      className="relative isolate overflow-hidden bg-navy-950"
     >
-      {/* background fx */}
-      <div className="absolute inset-0 -z-10 bg-grid-fade" />
-      <div className="absolute inset-0 -z-10 opacity-40">
-        <div className="absolute -top-40 left-1/3 h-96 w-96 rounded-full bg-brand-600/40 blur-3xl animate-pulse-slow" />
-        <div className="absolute top-1/2 -right-10 h-96 w-96 rounded-full bg-indigo-500/30 blur-3xl" />
-      </div>
+      {/* DESKTOP globe: big, pinned to the right edge, never stretched or cut sideways */}
+      <img
+        src="/img/global-offices.png"
+        alt=""
+        width={1110}
+        height={1022}
+        fetchPriority="high"
+        className="pointer-events-none absolute right-0 top-1/2 -z-20 hidden h-auto -translate-y-1/2 select-none lg:block"
+        style={{
+          width: 'min(58%, calc((100vh - 4rem) * 1.5))',
+          maskImage: fadeLeft,
+          WebkitMaskImage: fadeLeft,
+        }}
+      />
 
-      <div className="container-x grid min-h-[calc(100vh-6rem)] items-center gap-10 py-10 lg:grid-cols-[1.1fr_1fr]">
-        <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            Global IT Solutions &amp; Services · Since 2008
-          </div>
+      {/* Dark fade at the bottom so the stats row is readable */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-56 bg-gradient-to-t from-navy-950 via-navy-950/80 to-transparent" />
 
-          <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] text-white md:text-6xl">
-            Global Information Technology
-            <span className="block text-gradient">Solutions &amp; Services</span>
-          </h1>
+      <div className="container-x relative flex flex-col pb-16 lg:pb-20">
+        {/* Text column (left) */}
+        <div className="flex items-center pt-20 sm:pt-24 lg:min-h-[600px] lg:pt-24">
+        <div className="w-full max-w-xl lg:-ml-12 lg:max-w-md xl:-ml-16 xl:max-w-xl">
+            {/* Eyebrow — stays on one line */}
+            <div className="flex items-center gap-4">
+              <span className="h-0.5 w-12 shrink-0 bg-amber-400" />
+              <p className="text-xs font-bold uppercase tracking-[0.24em] text-amber-400 sm:whitespace-nowrap sm:text-sm">
+                
+                Technology · Talent · Transformation
+              </p>
+            </div>
 
-          <p className="mt-6 max-w-xl text-lg text-white/70">
-            Technology project delivery, clinical and life-sciences services, healthcare revenue
-            cycle management, and professional staffing, delivered across six countries through a
-            blended global delivery model, since 2008.
-          </p>
+            {/* Main headline */}
+            <h1
+              className="mt-8 font-display text-5xl font-extrabold leading-[0.98] tracking-[-0.045em] text-white sm:text-6xl lg:text-[4.5rem] xl:text-[5.4rem]"
+              style={{ textShadow: '0 3px 30px rgba(0,0,0,0.45)' }}
+            >
+              Built for
+              <br />
+              what&apos;s next.
+            </h1>
 
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#services" className="btn-primary">
-              Explore Our Services <ArrowRight size={16} />
-            </a>
-            <a href="#contact" className="btn-ghost">
-              Partner With Us
-            </a>
-          </div>
+            {/* Supporting copy */}
+            <p
+              className="mt-7 max-w-lg text-lg leading-8 text-white/90 sm:text-xl sm:leading-9"
+              style={{ textShadow: '0 2px 18px rgba(0,0,0,0.5)' }}
+            >
+              Technology, healthcare and life-sciences solutions with specialist
+              talent across six countries.
+            </p>
 
-        </div>
+            {/* Buttons */}
+            <div className="mt-10 flex flex-wrap items-center gap-5">
+              <a
+                href="#what-we-do"
+                className="inline-flex items-center gap-3 rounded-sm bg-amber-400 px-8 py-4 text-base font-bold text-navy-950 transition duration-300 hover:bg-amber-300"
+              >
+                Explore our services
+                <ArrowRight size={18} />
+              </a>
 
-        <div className="relative">
-          <div className="relative aspect-square w-full max-w-md mx-auto">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-brand-500/40 to-indigo-500/40 blur-3xl" />
-            <div className="relative h-full w-full rounded-[2rem] border border-white/10 bg-white/[0.03] overflow-hidden">
-              <img
-                src="/img/s1.jpg"
-                alt="Cliff Services global delivery"
-                className="h-full w-full object-cover"
-                onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src = '/img/s2.jpg';
-                }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-white/10 bg-white/5 p-3 backdrop-blur">
-                <p className="text-xs uppercase tracking-widest text-brand-300">Global delivery</p>
-                <p className="mt-1 text-sm text-white/80">
-                  United Kingdom headquarters with delivery teams across six countries and 24×7
-                  capacity.
-                </p>
-              </div>
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-3 rounded-sm border border-white bg-navy-950/40 px-8 py-4 text-base font-bold text-white transition duration-300 hover:border-amber-400 hover:text-amber-400"
+              >
+                Talk to Cliff
+                <ArrowUpRight size={18} />
+              </a>
             </div>
           </div>
         </div>
+
+        {/* MOBILE/TABLET globe: full width, under the text */}
+        <img
+          src="/img/global-offices.png"
+          alt="World map showing Cliff Services offices in the US, Canada, UK, Ireland, India and Australia"
+          width={1110}
+          height={1022}
+          className="mt-10 block h-auto w-full lg:hidden"
+        />
+
+        {/* Trust indicators */}
+        <ul className="mt-10 grid grid-cols-2 gap-y-6 border-t border-white/20 py-6 lg:mt-4 lg:grid-cols-4 lg:py-7">
+          {STATS.map(({ label, Icon }, i) => (
+            <li
+              key={label}
+              className={`flex items-center gap-4 text-sm font-bold uppercase tracking-[0.16em] text-white lg:justify-center lg:gap-6 lg:text-base ${
+                i > 0 ? 'lg:border-l lg:border-white/30' : ''
+              }`}
+            >
+              <Icon className="h-8 w-8 shrink-0 lg:h-10 lg:w-10" strokeWidth={1.5} />
+              {label}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

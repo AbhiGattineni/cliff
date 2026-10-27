@@ -4,51 +4,134 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: dark;
-}
+/* Light is the default and dark is the variant. `color-scheme` is set by the
+   theme module on <html> so form controls and scrollbars follow the page
+   rather than the operating system. */
 
 html,
 body,
 #root {
   min-height: 100%;
-  background: #0a0a14;
-  color: #e5e7eb;
+}
+
+body {
+  @apply bg-white text-slate-700 antialiased dark:bg-navy-950 dark:text-slate-300;
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-  -webkit-font-smoothing: antialiased;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-@layer components {
-  .container-x {
-    @apply mx-auto max-w-7xl px-6 lg:px-8;
+/* Anchored sections sit under a fixed header. Without this the heading lands
+   behind it on every in-page jump. */
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
-  .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-500 to-indigo-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-600/30 transition hover:shadow-brand-600/50 hover:brightness-110;
-  }
-  .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 backdrop-blur transition hover:bg-white/10;
-  }
-  .eyebrow {
-    @apply text-xs font-semibold uppercase tracking-[0.3em] text-brand-300;
-  }
-  .card-dark {
-    @apply rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition hover:border-white/20 hover:bg-white/[0.06];
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
+@layer components {
+  .container-x {
+    @apply mx-auto max-w-6xl px-6 lg:px-8;
+  }
+
+  /* Bands.
+     The page alternates between a light surface and a navy one. In dark mode
+     the light band becomes the darker of the two navies, so the alternation
+     survives rather than flattening into one colour. */
+  .band-light {
+    @apply bg-white dark:bg-navy-950;
+  }
+  .band-tint {
+    @apply bg-slate-50 dark:bg-navy-900;
+  }
+  .band-navy {
+    @apply bg-navy-900 text-slate-300 dark:bg-navy-900;
+  }
+
+  /* A navy band that lifts over the section above it on a large radius. This
+     is the join that does most of the work in the reference layout. */
+  .band-lift {
+    @apply relative -mt-10 rounded-t-[2rem] sm:rounded-t-[2.5rem];
+  }
+
+  /* Centred section header: a small gold eyebrow over a large heading. */
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.22em] text-[color:theme(colors.gold.ink)] dark:text-gold-400;
+  }
+  .eyebrow-on-navy {
+    @apply text-xs font-semibold uppercase tracking-[0.22em] text-gold-400;
+  }
+  .h-section {
+    @apply font-display text-3xl font-bold leading-tight tracking-tight text-navy-900 sm:text-4xl dark:text-white;
+  }
+  .h-section-on-navy {
+    @apply font-display text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl;
+  }
+  .lede {
+    @apply text-base leading-relaxed text-slate-600 dark:text-slate-400;
+  }
+  .lede-on-navy {
+    @apply text-base leading-relaxed text-slate-300;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold-500 px-6 py-3 text-sm font-semibold text-navy-950 transition hover:bg-gold-400;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-navy-900/20 px-6 py-3 text-sm font-semibold text-navy-900 transition hover:bg-navy-900/5 dark:border-white/25 dark:text-white dark:hover:bg-white/10;
+  }
+  .btn-on-navy {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/60 hover:bg-white/10;
+  }
+
+  /* Soft tinted card, the shape the reference uses for its numbers. */
+  .stat-card {
+    @apply rounded-2xl border border-slate-200/80 bg-slate-50 p-7 dark:border-white/10 dark:bg-white/[0.04];
+  }
+  .card-navy {
+    @apply rounded-2xl border border-white/10 bg-white/[0.04] p-7 transition hover:border-gold-500/40 hover:bg-white/[0.07];
+  }
+
+  .link-quiet {
+    @apply text-slate-600 transition hover:text-[color:theme(colors.gold.ink)] dark:text-slate-400 dark:hover:text-gold-400;
+  }
+  .link-on-navy {
+    @apply text-slate-300 transition hover:text-gold-400;
+  }
+
+  /* Pages not yet moved to the new system keep their dark treatment and stay
+     readable on a light default. Remove the wrapper when the page is redone. */
+  .legacy-dark {
+    @apply bg-navy-950 text-slate-300;
+  }
+}
+
+/* Still used by the pages this pass did not touch: Careers, the service and
+   product detail pages, Legal and the 404. Kept so they look as they did
+   rather than half-converted, and it goes when they do. */
 .text-gradient {
-  background: linear-gradient(90deg, #a78bfa 0%, #60a5fa 50%, #34d399 100%);
+  background: linear-gradient(90deg, #e1bc42 0%, #d4af36 55%, #b3922c 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
+
 :focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.45);
-  border-radius: 8px;
+  outline: 2px solid theme('colors.gold.500');
+  outline-offset: 2px;
+  border-radius: 6px;
 }
