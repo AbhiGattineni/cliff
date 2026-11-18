@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Cloud, Server, BarChart3, Layers, Snowflake, Container, BrainCircuit, ShieldCheck } from 'lucide-react';
+import { Cloud, Server, BarChart3, Layers, Snowflake, Container, BrainCircuit, ShieldCheck, Workflow } from 'lucide-react';
 
 type Partnership = {
   icon: typeof Cloud;
@@ -76,6 +76,13 @@ const PARTNERSHIPS: Partnership[] = [
     program: 'CrowdStrike Partner Program',
     track: 'Solution provider',
     backs: 'Endpoint and cloud workload security across our managed services practice.',
+    status: 'Active',
+  },
+  {
+    icon: Workflow,
+    program: 'Pega Partner Program',
+    track: 'Registered partner',
+    backs: 'Case management, workflow, and intelligent automation delivery on Pega.',
     status: 'Active',
   },
   {
